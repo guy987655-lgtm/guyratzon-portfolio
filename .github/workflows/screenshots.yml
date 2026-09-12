@@ -1,0 +1,71 @@
+name: Screenshots
+
+# Captures the demo-mode routes of the source sites and opens a review PR.
+# The PR's Vercel preview (behind Vercel Authentication) shows /_review; merging = approving.
+on:
+  schedule:
+    - cron: "17 5 * * 0" # weekly safety net, Sunday 05:17 UTC
+  workflow_dispatch:
+    inputs:
+      slug:
+        description: "Source to capture (blank = every auto source)"
+        required: false
+        default: ""
+
+permissions:
+  contents: write
+  pull-requests: write
+
+concurrency:
+  group: screenshots-${{ inputs.slug || 'all' }}
+  cancel-in-progress: false
+
+jobs:
+  capture:
+    runs-on: ubuntu-latest
+    container:
+      image: mcr.microsoft.com/playwright:v1.63.0-noble
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Hebrew fonts for the renderer
+        run: apt-get update && apt-get install -y --no-install-recommends fonts-noto-core && fc-cache -f
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+          cache: npm
+
+      - run: npm ci
+
+      # No credentials of any kind: the sources are captured only through their public demo mode.
+      - name: Capture
+        id: capture
+        continue-on-error: true
+        run: npx tsx scripts/screenshots/capture.ts ${{ inputs.slug && format('--slug {0}', inputs.slug) || '' }}
+
+      # PRs opened with GITHUB_TOKEN don't trigger other workflows, so the checks run here.
+      - name: Check and build
+        run: npm run check && npm run build
+
+      - name: Open review PR
+        uses: peter-evans/create-pull-request@v7
+        with:
+          branch: shots/${{ inputs.slug || 'all' }}
+          delete-branch: true
+          commit-message: "Refresh screenshots: ${{ inputs.slug || 'all sources' }}"
+          title: "Screenshot review: ${{ inputs.slug || 'all sources' }}"
+          body: |
+            New or changed demo-mode captures. Open this PR's Vercel preview at `/_review`, go through the checklist, then merge to publish.
+            Sites that failed to capture kept their previous images (see the run log).
+          # Committed as Guy: Vercel Hobby can refuse to deploy a bot's commit in a private repo.
+          author: Guy Ratzon <267420579+guy987655-lgtm@users.noreply.github.com>
+          committer: Guy Ratzon <267420579+guy987655-lgtm@users.noreply.github.com>
+          add-paths: |
+            public/exhibit/**
+            data/screenshots/**
+            data/manifests/**
+
+      - name: Fail the run if a site failed to capture
+        if: steps.capture.outcome == 'failure'
+        run: exit 1

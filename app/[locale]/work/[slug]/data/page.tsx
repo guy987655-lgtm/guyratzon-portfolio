@@ -106,7 +106,7 @@ export default async function DataRoomPage({ params }: PageProps<"/[locale]/work
                       <span className="font-semibold">{m.dataRoom.grain}: </span>
                       {tr(table.grain, locale)}
                     </p>
-                    <div className="mt-3 overflow-x-auto">
+                    <div tabIndex={0} role="region" aria-label={table.name} className="mt-3 overflow-x-auto">
                       <table className="w-full text-sm">
                         <thead>
                           <tr className="border-b border-line text-start text-muted">
@@ -165,14 +165,14 @@ export default async function DataRoomPage({ params }: PageProps<"/[locale]/work
                     <span dir="ltr">SQL · PostgreSQL</span>
                     <CopyButton text={sql} label={m.dataRoom.copy} done={m.dataRoom.copied} />
                   </div>
-                  <pre dir="ltr" className="overflow-x-auto p-4 text-[13px] leading-relaxed">
+                  <pre dir="ltr" tabIndex={0} aria-label={`SQL ${i + 1}`} className="overflow-x-auto p-4 text-[13px] leading-relaxed">
                     <code>{sql}</code>
                   </pre>
                 </div>
                 {result && (
                   <div>
                     <p className="mb-2 text-sm font-medium text-muted">{m.dataRoom.result}</p>
-                    <div dir="ltr" className="overflow-x-auto rounded-2xl border border-line bg-surface">
+                    <div dir="ltr" tabIndex={0} role="region" aria-label={m.dataRoom.result} className="overflow-x-auto rounded-2xl border border-line bg-surface">
                       <table className="w-full text-sm">
                         <thead>
                           <tr className="border-b border-line bg-sunken/60">

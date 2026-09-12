@@ -1,0 +1,57 @@
+name: Poll deploys
+
+# Hourly: did a source site ship a new production deploy? If so, capture just that site.
+# One secret (VERCEL_TOKEN) in one repo — the source repos need no workflow and no token.
+on:
+  schedule:
+    - cron: "23 * * * *"
+  workflow_dispatch:
+
+permissions:
+  actions: write
+  contents: read
+
+jobs:
+  poll:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+
+      - uses: actions/cache/restore@v4
+        with:
+          path: .deploy-state.json
+          key: deploy-state-${{ github.run_id }}
+          restore-keys: deploy-state-
+
+      - name: Check for new production deploys
+        id: poll
+        env:
+          VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
+          VERCEL_TEAM_ID: team_p65xAIo5EMK0EB1JfSX74KEF
+        run: |
+          changed="$(npx --yes tsx@4.23.13 scripts/poll-deploys.ts .deploy-state.json)"
+          {
+            echo "changed<<EOF"
+            echo "$changed"
+            echo "EOF"
+          } >> "$GITHUB_OUTPUT"
+
+      - uses: actions/cache/save@v4
+        with:
+          path: .deploy-state.json
+          key: deploy-state-${{ github.run_id }}
+
+      - name: Dispatch captures
+        if: steps.poll.outputs.changed != ''
+        env:
+          GH_TOKEN: ${{ github.token }}
+          CHANGED: ${{ steps.poll.outputs.changed }}
+        run: |
+          while read -r slug; do
+            if [ -n "$slug" ]; then gh workflow run screenshots.yml -f slug="$slug"; fi
+          done <<< "$CHANGED"

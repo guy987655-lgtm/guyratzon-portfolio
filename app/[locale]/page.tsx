@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { notFound } from "next/navigation";
+import { HomeView } from "@/components/Analytics";
 import { ProjectCard } from "@/components/ProjectCard";
 import { QuickPeek, type PeekItem } from "@/components/QuickPeek";
 import { projectHref, projects } from "@/content/projects";
@@ -48,6 +49,7 @@ export default async function HomePage({ params }: PageProps<"/[locale]">) {
 
   return (
     <>
+      <HomeView />
       <section className="border-b border-line bg-[radial-gradient(ellipse_at_top,var(--color-accent-soft),transparent_60%)]">
         <div className="mx-auto max-w-6xl px-4 pb-16 pt-14 sm:px-6 sm:pb-24 sm:pt-20">
           <p className="text-sm font-semibold tracking-wide text-accent">{m.home.role}</p>

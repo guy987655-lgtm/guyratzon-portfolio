@@ -44,6 +44,16 @@ for (const path of targets) {
         const page = await context.newPage();
         const url = `${base}/${locale}${path === "/" ? "" : path}`;
         await page.goto(url, { waitUntil: "load" });
+        if (full) {
+          // Walk down the page so lazy images load before a full-page capture, then return to the top.
+          await page.evaluate(async () => {
+            for (let y = 0; y < document.body.scrollHeight; y += window.innerHeight * 0.8) {
+              window.scrollTo(0, y);
+              await new Promise((r) => setTimeout(r, 120));
+            }
+            window.scrollTo(0, 0);
+          });
+        }
         await page.waitForTimeout(800);
         await page.evaluate(() => document.fonts.ready.then(() => undefined));
         const name = `${path === "/" ? "home" : path.slice(1).replace(/\//g, "_")}-${locale}-${theme}-${size}.png`;
