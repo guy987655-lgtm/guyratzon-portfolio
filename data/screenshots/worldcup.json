@@ -1,0 +1,105 @@
+{
+  "slug": "worldcup",
+  "mode": "auto",
+  "capturedAt": "2026-09-12T17:50:16.403Z",
+  "source": "http://localhost:4103",
+  "manifestVersion": "1.1.0",
+  "shots": [
+    {
+      "route": "schedule-he",
+      "locale": "he",
+      "device": "mobile",
+      "theme": "any",
+      "width": 780,
+      "height": 1688,
+      "file": "/exhibit/worldcup/schedule-he-he-mobile-any.082620c861.webp",
+      "hash": "082620c861",
+      "capturedAt": "2026-09-12T17:50:16.403Z",
+      "status": "new"
+    },
+    {
+      "route": "schedule-he",
+      "locale": "he",
+      "device": "desktop",
+      "theme": "any",
+      "width": 2160,
+      "height": 1350,
+      "file": "/exhibit/worldcup/schedule-he-he-desktop-any.453cd88831.webp",
+      "hash": "453cd88831",
+      "capturedAt": "2026-09-12T17:50:16.403Z",
+      "status": "new"
+    },
+    {
+      "route": "schedule-en",
+      "locale": "en",
+      "device": "mobile",
+      "theme": "any",
+      "width": 780,
+      "height": 1688,
+      "file": "/exhibit/worldcup/schedule-en-en-mobile-any.636f69e671.webp",
+      "hash": "636f69e671",
+      "capturedAt": "2026-09-12T17:50:16.403Z",
+      "status": "new"
+    },
+    {
+      "route": "schedule-en",
+      "locale": "en",
+      "device": "desktop",
+      "theme": "any",
+      "width": 2160,
+      "height": 1350,
+      "file": "/exhibit/worldcup/schedule-en-en-desktop-any.6041841284.webp",
+      "hash": "6041841284",
+      "capturedAt": "2026-09-12T17:50:16.403Z",
+      "status": "new"
+    },
+    {
+      "route": "bracket-he",
+      "locale": "he",
+      "device": "mobile",
+      "theme": "any",
+      "width": 780,
+      "height": 1688,
+      "file": "/exhibit/worldcup/bracket-he-he-mobile-any.95bf210f8a.webp",
+      "hash": "95bf210f8a",
+      "capturedAt": "2026-09-12T17:50:16.403Z",
+      "status": "new"
+    },
+    {
+      "route": "bracket-he",
+      "locale": "he",
+      "device": "desktop",
+      "theme": "any",
+      "width": 2160,
+      "height": 1350,
+      "file": "/exhibit/worldcup/bracket-he-he-desktop-any.23496547a0.webp",
+      "hash": "23496547a0",
+      "capturedAt": "2026-09-12T17:50:16.403Z",
+      "status": "new"
+    },
+    {
+      "route": "bracket-en",
+      "locale": "en",
+      "device": "mobile",
+      "theme": "any",
+      "width": 780,
+      "height": 1688,
+      "file": "/exhibit/worldcup/bracket-en-en-mobile-any.bf6f7566ba.webp",
+      "hash": "bf6f7566ba",
+      "capturedAt": "2026-09-12T17:50:16.403Z",
+      "status": "new"
+    },
+    {
+      "route": "bracket-en",
+      "locale": "en",
+      "device": "desktop",
+      "theme": "any",
+      "width": 2160,
+      "height": 1350,
+      "file": "/exhibit/worldcup/bracket-en-en-desktop-any.27603e1f41.webp",
+      "hash": "27603e1f41",
+      "capturedAt": "2026-09-12T17:50:16.403Z",
+      "status": "new"
+    }
+  ]
+}

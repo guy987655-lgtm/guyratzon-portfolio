@@ -1,0 +1,33 @@
+{
+  "slug": "tape",
+  "mode": "auto",
+  "capturedAt": "2026-09-12T17:49:51.531Z",
+  "source": "http://localhost:4101",
+  "manifestVersion": "1.1.0",
+  "shots": [
+    {
+      "route": "tape",
+      "locale": "en",
+      "device": "mobile",
+      "theme": "any",
+      "width": 780,
+      "height": 1688,
+      "file": "/exhibit/tape/tape-en-mobile-any.4563018a27.webp",
+      "hash": "4563018a27",
+      "capturedAt": "2026-09-12T17:49:51.531Z",
+      "status": "new"
+    },
+    {
+      "route": "tape",
+      "locale": "en",
+      "device": "desktop",
+      "theme": "any",
+      "width": 2160,
+      "height": 1350,
+      "file": "/exhibit/tape/tape-en-desktop-any.56ccf59709.webp",
+      "hash": "56ccf59709",
+      "capturedAt": "2026-09-12T17:49:51.531Z",
+      "status": "new"
+    }
+  ]
+}

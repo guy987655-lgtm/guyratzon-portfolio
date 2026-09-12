@@ -1,0 +1,57 @@
+{
+  "slug": "piggybank",
+  "mode": "auto",
+  "capturedAt": "2026-09-12T17:49:59.871Z",
+  "source": "http://localhost:4102",
+  "manifestVersion": "1.1.0",
+  "shots": [
+    {
+      "route": "calendar",
+      "locale": "en",
+      "device": "mobile",
+      "theme": "any",
+      "width": 780,
+      "height": 1688,
+      "file": "/exhibit/piggybank/calendar-en-mobile-any.eedc48b8df.webp",
+      "hash": "eedc48b8df",
+      "capturedAt": "2026-09-12T17:49:59.871Z",
+      "status": "new"
+    },
+    {
+      "route": "calendar",
+      "locale": "en",
+      "device": "desktop",
+      "theme": "any",
+      "width": 2160,
+      "height": 1350,
+      "file": "/exhibit/piggybank/calendar-en-desktop-any.d41b86383a.webp",
+      "hash": "d41b86383a",
+      "capturedAt": "2026-09-12T17:49:59.871Z",
+      "status": "new"
+    },
+    {
+      "route": "trends",
+      "locale": "en",
+      "device": "mobile",
+      "theme": "any",
+      "width": 780,
+      "height": 1688,
+      "file": "/exhibit/piggybank/trends-en-mobile-any.0cbaae5fb6.webp",
+      "hash": "0cbaae5fb6",
+      "capturedAt": "2026-09-12T17:49:59.871Z",
+      "status": "new"
+    },
+    {
+      "route": "trends",
+      "locale": "en",
+      "device": "desktop",
+      "theme": "any",
+      "width": 2160,
+      "height": 1350,
+      "file": "/exhibit/piggybank/trends-en-desktop-any.c128765b27.webp",
+      "hash": "c128765b27",
+      "capturedAt": "2026-09-12T17:49:59.871Z",
+      "status": "new"
+    }
+  ]
+}

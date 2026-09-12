@@ -31,6 +31,8 @@
     "@types/react-dom": "^19",
     "eslint": "^9",
     "eslint-config-next": "16.3.5",
+    "pixelmatch": "^7.2.0",
+    "sharp": "^0.35.4",
     "tailwindcss": "4.3.3",
     "tsx": "4.23.13",
     "typescript": "5.9.3",

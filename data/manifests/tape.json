@@ -1,0 +1,107 @@
+{
+  "slug": "tape",
+  "title": {
+    "he": "Tape Calculator",
+    "en": "Tape Calculator"
+  },
+  "headline": {
+    "he": "מחשבון סרט: כל חישוב נשאר על הסרט, עם הערה לכל שורה",
+    "en": "A tape calculator: every calculation stays on the tape, with a note on each line"
+  },
+  "status": "live",
+  "depth": "full",
+  "version": "1.1.0",
+  "updatedAt": "2026-09-12T00:00:00+03:00",
+  "stack": [
+    "HTML",
+    "CSS",
+    "JavaScript",
+    "localStorage"
+  ],
+  "facts": [
+    {
+      "label": {
+        "he": "נבנה",
+        "en": "Built"
+      },
+      "value": {
+        "he": "מאי 2026",
+        "en": "May 2026"
+      }
+    },
+    {
+      "label": {
+        "he": "תלויות",
+        "en": "Dependencies"
+      },
+      "value": {
+        "he": "אין — קובץ HTML אחד",
+        "en": "None — a single HTML file"
+      }
+    },
+    {
+      "label": {
+        "he": "קומיטים",
+        "en": "Commits"
+      },
+      "value": {
+        "he": "16",
+        "en": "16"
+      }
+    }
+  ],
+  "highlights": [
+    {
+      "title": {
+        "he": "סרט שאפשר לערוך",
+        "en": "An editable tape"
+      },
+      "body": {
+        "he": "לחיצה על מספר בשורה ישנה משנה אותו, וכל השורות שאחריה מחושבות מחדש בשרשרת.",
+        "en": "Tap a number in an earlier row to change it; every row after it recalculates down the chain."
+      }
+    },
+    {
+      "title": {
+        "he": "הערה לכל שורה",
+        "en": "A note on every line"
+      },
+      "body": {
+        "he": "כל חישוב מקבל תווית, כך שהסרט נקרא כמו רשימת הוצאות ולא כמו טור מספרים.",
+        "en": "Each calculation gets a label, so the tape reads like an expense list rather than a column of numbers."
+      }
+    },
+    {
+      "title": {
+        "he": "נשמר רק במכשיר",
+        "en": "Kept on the device"
+      },
+      "body": {
+        "he": "הסרט נשמר ב-localStorage של הדפדפן ולא נשלח לשום שרת.",
+        "en": "The tape lives in the browser's localStorage and is never sent to a server."
+      }
+    }
+  ],
+  "demoMode": {
+    "supported": true,
+    "entryUrl": "/?demo=1",
+    "note": {
+      "he": "תקציב חודשי לדוגמה של 10,000 ₪",
+      "en": "A sample 10,000 ₪ monthly budget"
+    }
+  },
+  "locales": [
+    "en"
+  ],
+  "tourRoutes": [
+    {
+      "id": "tape",
+      "path": "/?demo=1",
+      "caption": {
+        "he": "תקציב חודשי שיורד שורה אחרי שורה, עם הערה לכל הוצאה",
+        "en": "A monthly budget running down line by line, with a note on every expense"
+      },
+      "locale": "en"
+    }
+  ]
+}

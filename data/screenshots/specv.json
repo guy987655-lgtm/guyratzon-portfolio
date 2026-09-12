@@ -1,0 +1,105 @@
+{
+  "slug": "specv",
+  "mode": "auto",
+  "capturedAt": "2026-09-12T17:49:46.684Z",
+  "source": "http://localhost:4104",
+  "manifestVersion": "0.1.0",
+  "shots": [
+    {
+      "route": "workspace",
+      "locale": "en",
+      "device": "mobile",
+      "theme": "any",
+      "width": 780,
+      "height": 1688,
+      "file": "/exhibit/specv/workspace-en-mobile-any.39d2e2fee0.webp",
+      "hash": "39d2e2fee0",
+      "capturedAt": "2026-09-12T17:49:46.684Z",
+      "status": "new"
+    },
+    {
+      "route": "workspace",
+      "locale": "en",
+      "device": "desktop",
+      "theme": "any",
+      "width": 2160,
+      "height": 1350,
+      "file": "/exhibit/specv/workspace-en-desktop-any.eba15d3b18.webp",
+      "hash": "eba15d3b18",
+      "capturedAt": "2026-09-12T17:49:46.684Z",
+      "status": "new"
+    },
+    {
+      "route": "match-analysis",
+      "locale": "en",
+      "device": "mobile",
+      "theme": "any",
+      "width": 780,
+      "height": 1688,
+      "file": "/exhibit/specv/match-analysis-en-mobile-any.db4c290586.webp",
+      "hash": "db4c290586",
+      "capturedAt": "2026-09-12T17:49:46.684Z",
+      "status": "new"
+    },
+    {
+      "route": "match-analysis",
+      "locale": "en",
+      "device": "desktop",
+      "theme": "any",
+      "width": 2160,
+      "height": 1350,
+      "file": "/exhibit/specv/match-analysis-en-desktop-any.6ada0767a6.webp",
+      "hash": "6ada0767a6",
+      "capturedAt": "2026-09-12T17:49:46.684Z",
+      "status": "new"
+    },
+    {
+      "route": "interview",
+      "locale": "en",
+      "device": "mobile",
+      "theme": "any",
+      "width": 780,
+      "height": 1688,
+      "file": "/exhibit/specv/interview-en-mobile-any.293d203c1d.webp",
+      "hash": "293d203c1d",
+      "capturedAt": "2026-09-12T17:49:46.684Z",
+      "status": "new"
+    },
+    {
+      "route": "interview",
+      "locale": "en",
+      "device": "desktop",
+      "theme": "any",
+      "width": 2160,
+      "height": 1350,
+      "file": "/exhibit/specv/interview-en-desktop-any.e4880be437.webp",
+      "hash": "e4880be437",
+      "capturedAt": "2026-09-12T17:49:46.684Z",
+      "status": "new"
+    },
+    {
+      "route": "sample",
+      "locale": "en",
+      "device": "mobile",
+      "theme": "any",
+      "width": 780,
+      "height": 1688,
+      "file": "/exhibit/specv/sample-en-mobile-any.0b9fb58559.webp",
+      "hash": "0b9fb58559",
+      "capturedAt": "2026-09-12T17:49:46.684Z",
+      "status": "new"
+    },
+    {
+      "route": "sample",
+      "locale": "en",
+      "device": "desktop",
+      "theme": "any",
+      "width": 2160,
+      "height": 1350,
+      "file": "/exhibit/specv/sample-en-desktop-any.e0344d44ce.webp",
+      "hash": "e0344d44ce",
+      "capturedAt": "2026-09-12T17:49:46.684Z",
+      "status": "new"
+    }
+  ]
+}
