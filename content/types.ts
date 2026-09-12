@@ -59,6 +59,8 @@ export type Project = {
   decisions: Decision[];
   whatBroke?: L10n;
   gallery: GalleryItem[];
+  /** Which device the gallery opens on (phone-first apps open on mobile). Default: desktop. */
+  preferDevice?: Device;
   /** Embed the demo mode in a sandboxed frame (World Cup only). */
   liveFrame?: boolean;
 };

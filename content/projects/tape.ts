@@ -16,6 +16,7 @@ export const tape: Project = {
     en: "A tool I built for myself and have used since May 2026. TODO(guy): confirm the date and the use",
   },
   interfaceLocales: ["en"],
+  preferDevice: "mobile",
   cardFact: { he: "קובץ HTML אחד, בלי תלויות", en: "One HTML file, zero dependencies" },
   overview: {
     he: "מחשבון עם סרט, כמו של פעם: כל חישוב נשאר על הסרט, עם הערה לצידו. אני משתמש בו לתקציב חודשי: מתחילים מסכום, כל הוצאה מקזזת, ורואים כמה נשאר עד האיפוס. TODO(guy): לאשר את תיאור השימוש",

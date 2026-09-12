@@ -166,6 +166,7 @@ export default async function ProjectPage({ params }: PageProps<"/[locale]/work/
             slides={slides}
             rtl={locale === "he"}
             badges={badges}
+            prefer={project.preferDevice}
             labels={{
               mobile: m.project.mobile,
               desktop: m.project.desktop,

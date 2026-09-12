@@ -22,3 +22,6 @@ next-env.d.ts
 /.vercel
 /tmp/
 
+
+# résumé QR output (generated at launch)
+/qr/

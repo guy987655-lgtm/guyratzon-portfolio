@@ -45,16 +45,19 @@ export function Gallery({
   labels,
   rtl,
   badges,
+  prefer = "desktop",
 }: {
   slug: string;
   slides: GallerySlide[];
   labels: Labels;
   rtl: boolean;
   badges: string[];
+  prefer?: Device;
 }) {
   const hasDesktop = slides.some((s) => s.shots.desktop);
   const hasMobile = slides.some((s) => s.shots.mobile);
-  const [device, setDevice] = useState<Device>(hasDesktop ? "desktop" : "mobile");
+  const initial: Device = prefer === "mobile" ? (hasMobile ? "mobile" : "desktop") : hasDesktop ? "desktop" : "mobile";
+  const [device, setDevice] = useState<Device>(initial);
   const [index, setIndex] = useState(0);
   const trackRef = useRef<HTMLDivElement>(null);
   const visible = slides.filter((s) => s.shots[device]);
@@ -100,7 +103,7 @@ export function Gallery({
         </div>
         {hasDesktop && hasMobile && (
           <div role="group" aria-label={labels.deviceToggle} className="inline-flex rounded-full border border-line bg-surface p-1 text-sm">
-            {(["desktop", "mobile"] as Device[]).map((d) => (
+            {((initial === "mobile" ? ["mobile", "desktop"] : ["desktop", "mobile"]) as Device[]).map((d) => (
               <button
                 key={d}
                 type="button"

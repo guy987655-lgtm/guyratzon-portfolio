@@ -13,6 +13,7 @@ export const piggybank: Project = {
     en: "A tool I built for myself and have used since July 2026. TODO(guy): confirm the date and the use",
   },
   interfaceLocales: ["en"],
+  preferDevice: "mobile",
   cardFact: { he: "שני מסכים: לוח שנה ומגמות", en: "Two screens: a calendar and trends" },
   overview: {
     he: "לוח שנה למשקל ולהרגלי אכילה: שוקלים, מטביעים חזרזיר על ימים של הגזמה ומשקולת על ימי אימון, ורואים את החודש כולו בגרף אחד.",
