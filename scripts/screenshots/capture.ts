@@ -22,12 +22,18 @@ function parseArgs(argv: string[]) {
   for (let i = 0; i < argv.length; i++) {
     const arg = argv[i];
     const next = argv[i + 1];
-    if (arg === "--slug" && next) (slugs.push(next), i++);
-    else if (arg === "--base" && next) {
+    if (!next) continue;
+    if (arg === "--slug") {
+      slugs.push(next);
+      i++;
+    } else if (arg === "--base") {
       const [slug, url] = next.split("=");
       if (slug && url) bases.set(slug, url);
       i++;
-    } else if (arg === "--channel" && next) (channel = next, i++);
+    } else if (arg === "--channel") {
+      channel = next;
+      i++;
+    }
   }
   return { slugs, bases, channel };
 }
@@ -71,7 +77,8 @@ async function main() {
         const index = await writeSite({ slug: source.slug, mode: "auto", base, manifestVersion: manifest.version, raw });
         mkdirSync(join(ROOT, "data", "manifests"), { recursive: true });
         writeFileSync(join(ROOT, "data", "manifests", `${source.slug}.json`), JSON.stringify(manifest, null, 2) + "\n");
-        const counts = index.shots.reduce<Record<string, number>>((acc, s) => ((acc[s.status] = (acc[s.status] ?? 0) + 1), acc), {});
+        const counts: Record<string, number> = {};
+        for (const s of index.shots) counts[s.status] = (counts[s.status] ?? 0) + 1;
         console.log(`  → ${index.shots.length} shots ${JSON.stringify(counts)}`);
       } catch (err) {
         failures.push(source.slug);

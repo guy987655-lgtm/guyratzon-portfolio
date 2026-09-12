@@ -44,7 +44,9 @@ function checkText(text: string, where: string) {
   if (TODO.test(text)) (strict ? errors : warnings).push(`${where}: unresolved TODO(guy)`);
 }
 
-function walkContent(value: unknown, where: string, seen = new WeakSet<object>()) {
+const seenObjects = new WeakSet<object>();
+
+function walkContent(value: unknown, where: string, seen = seenObjects) {
   if (value === null || typeof value !== "object") return;
   if (seen.has(value)) return;
   seen.add(value);

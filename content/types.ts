@@ -13,9 +13,14 @@ export type Callout = { n: number; x: number; y: number; text: L10n };
 
 /** One screen in a project's gallery. The image itself comes from the screenshot index by `route`. */
 export type GalleryItem = {
-  /** Tour route id (matches config/sources.ts allowedPaths ids and the screenshot index). */
-  route: string;
+  /**
+   * Tour route id (matches config/sources.ts allowedPaths and the screenshot index). Bilingual apps
+   * have one route per interface language — give both and each visitor gets their own language.
+   */
+  route: string | { he: string; en: string };
   caption: L10n;
+  /** Devices worth showing for this screen (default: both). */
+  devices?: Device[];
   callouts?: Partial<Record<Device, Callout[]>>;
 };
 
@@ -31,8 +36,13 @@ export type Project = {
   /** Public demo-mode entry. Absent for IBI (manual screenshots, no live link). */
   liveUrl?: string;
   stack: string[];
-  /** ISO date the tool went into real use. */
-  inUseSince: string;
+  /** ISO date of the first commit (verifiable). */
+  builtAt: string;
+  /**
+   * How it's used, stated as a fact — e.g. "a tool I built for myself and have used since …".
+   * Never implies an audience a personal tool doesn't have.
+   */
+  usage: L10n;
   /** Which UI languages the source app itself supports (drives the "Interface in …" badge). */
   interfaceLocales: Locale[];
   /** The single fact shown on the home card. */

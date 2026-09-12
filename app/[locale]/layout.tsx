@@ -1,6 +1,7 @@
 import type { Viewport } from "next";
 import { Heebo, Inter } from "next/font/google";
 import { notFound } from "next/navigation";
+import { EntryTracker } from "@/components/EntryTracker";
 import { Footer } from "@/components/Footer";
 import { HandoffRestore } from "@/components/HandoffRestore";
 import { Header } from "@/components/Header";
@@ -53,6 +54,7 @@ export default async function LocaleLayout({ children, params }: LayoutProps<"/[
         </main>
         <Footer locale={locale} />
         <HandoffRestore />
+        <EntryTracker />
       </body>
     </html>
   );

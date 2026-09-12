@@ -44,7 +44,7 @@ export const sources: Source[] = [
     capture: "manual",
     allowedPaths: [
       { id: "overview", path: "/?demo=1&tab=overview" },
-      { id: "holdings", path: "/?demo=1&tab=today" },
+      { id: "today", path: "/?demo=1&tab=today" },
       { id: "instrument", path: "/?demo=1&tab=instrument" },
       { id: "cashflow", path: "/?demo=1&tab=cashflow" },
     ],
