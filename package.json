@@ -14,6 +14,8 @@
     "typecheck": "next typegen && tsc --noEmit",
     "test": "vitest run",
     "check-i18n": "tsx scripts/check-i18n.ts",
+    "render-assets": "tsx scripts/render-assets.ts",
+    "shots": "tsx scripts/screenshots/capture.ts",
     "check": "tsx scripts/check-i18n.ts && next typegen && tsc --noEmit && eslint . && vitest run --passWithNoTests",
     "e2e": "playwright test"
   },
@@ -32,6 +34,7 @@
     "@types/react-dom": "^19",
     "eslint": "^9",
     "eslint-config-next": "16.3.5",
+    "mermaid": "^12.0.0",
     "pixelmatch": "^7.2.0",
     "sharp": "^0.35.4",
     "tailwindcss": "4.3.3",

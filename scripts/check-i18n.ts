@@ -107,6 +107,28 @@ function checkPhysicalCss() {
   }
 }
 
+/** Every diagram a project references must be rendered, from its current source. */
+async function checkDiagrams() {
+  const { diagrams } = await import(pathToFileURL(join(ROOT, "content/diagrams.ts")).href);
+  const { projects } = await import(pathToFileURL(join(ROOT, "content/projects/index.ts")).href);
+  const { diagramHash } = await import(pathToFileURL(join(ROOT, "lib/diagram-hash.ts")).href);
+  let manifest: { diagrams?: Record<string, string> } = {};
+  try {
+    manifest = JSON.parse(readFileSync(join(ROOT, "public/diagrams/manifest.json"), "utf8"));
+  } catch {}
+  for (const project of projects as { slug: string; diagram?: string }[]) {
+    const id = project.diagram;
+    if (!id) continue;
+    if (!diagrams[id]) {
+      errors.push(`${project.slug}: diagram "${id}" has no source in content/diagrams.ts`);
+      continue;
+    }
+    if (manifest.diagrams?.[id] !== diagramHash(diagrams[id], ROOT)) {
+      errors.push(`${project.slug}: diagram "${id}" is missing or stale — run npm run render-assets`);
+    }
+  }
+}
+
 async function main() {
   const { he } = await import(pathToFileURL(join(ROOT, "messages/he.ts")).href);
   const { en } = await import(pathToFileURL(join(ROOT, "messages/en.ts")).href);
@@ -125,6 +147,7 @@ async function main() {
   }
 
   checkPhysicalCss();
+  await checkDiagrams();
 
   for (const w of warnings) console.warn(`warn  ${w}`);
   if (errors.length) {

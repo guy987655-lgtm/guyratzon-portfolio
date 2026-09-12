@@ -124,3 +124,41 @@ dialog.peek[open] {
     transform: translateY(16px);
   }
 }
+
+/* Pre-rendered Mermaid diagrams: repaint with theme tokens (Mermaid's own <style> is id-scoped). */
+.diagram svg .node rect,
+.diagram svg .node polygon,
+.diagram svg .node circle,
+.diagram svg .node path {
+  fill: var(--color-surface) !important;
+  stroke: var(--color-line) !important;
+}
+.diagram svg .flowchart-link,
+.diagram svg .edgePath path {
+  stroke: var(--color-muted) !important;
+}
+.diagram svg marker path,
+.diagram svg .arrowheadPath {
+  fill: var(--color-muted) !important;
+  stroke: var(--color-muted) !important;
+}
+.diagram svg .nodeLabel,
+.diagram svg .edgeLabel,
+.diagram svg .label,
+.diagram svg foreignObject div,
+.diagram svg foreignObject span,
+.diagram svg foreignObject p {
+  color: var(--color-ink) !important;
+  fill: var(--color-ink) !important;
+}
+/* Labels were measured at line-height 1.5; the page's taller Hebrew leading would clip them. */
+.diagram svg foreignObject div,
+.diagram svg foreignObject span,
+.diagram svg foreignObject p {
+  line-height: 1.5 !important;
+}
+.diagram svg .edgeLabel,
+.diagram svg .edgeLabel p,
+.diagram svg .labelBkg {
+  background-color: var(--color-paper) !important;
+}
