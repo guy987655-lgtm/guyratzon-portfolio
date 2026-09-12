@@ -1,0 +1,115 @@
+@import "tailwindcss";
+
+/*
+ * Theme model
+ * - No stored choice: follows the OS through `color-scheme: light dark` + light-dark() tokens (works without JS).
+ * - Header toggle (localStorage) or the QR's ?t= (sessionStorage) set data-theme on <html>; that always wins.
+ * `dark:` utilities match both cases, for the few things tokens can't express (e.g. swapping image pairs).
+ */
+@custom-variant dark {
+  &:where([data-theme="dark"], [data-theme="dark"] *) {
+    @slot;
+  }
+  @media (prefers-color-scheme: dark) {
+    &:where(:root:not([data-theme="light"]), :root:not([data-theme="light"]) *) {
+      @slot;
+    }
+  }
+}
+
+@theme {
+  --font-sans: var(--font-inter), var(--font-heebo), ui-sans-serif, system-ui, "Segoe UI", Arial, sans-serif;
+  --font-mono: ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+
+  --color-paper: light-dark(#f8f6f1, #111312);
+  --color-surface: light-dark(#ffffff, #191c1a);
+  --color-sunken: light-dark(#f0ede6, #0c0e0d);
+  --color-ink: light-dark(#1c1b19, #eceae4);
+  --color-muted: light-dark(#5b574f, #a9a59c);
+  --color-line: light-dark(#e4dfd5, #2c302d);
+  --color-accent: light-dark(#1f5f4a, #82c9a8);
+  --color-accent-ink: light-dark(#ffffff, #0d1f18);
+  --color-accent-soft: light-dark(#e3efe9, #1a2b24);
+  --color-chef: light-dark(#7a4d00, #f1c46e);
+  --color-chef-soft: light-dark(#fbf0d9, #2b2314);
+  --color-focus: light-dark(#1f5f4a, #9ad8bb);
+
+  --radius-card: 1rem;
+  --shadow-card: 0 1px 2px rgb(0 0 0 / 0.04), 0 4px 16px rgb(0 0 0 / 0.05);
+  --shadow-lift: 0 2px 4px rgb(0 0 0 / 0.06), 0 12px 32px rgb(0 0 0 / 0.09);
+}
+
+:root {
+  color-scheme: light dark;
+}
+:root[data-theme="light"] {
+  color-scheme: light;
+}
+:root[data-theme="dark"] {
+  color-scheme: dark;
+}
+
+@layer base {
+  html {
+    background: var(--color-paper);
+    color: var(--color-ink);
+    -webkit-text-size-adjust: 100%;
+    text-rendering: optimizeLegibility;
+  }
+  body {
+    font-family: var(--font-sans);
+    font-size: 1rem;
+    line-height: 1.6;
+    min-height: 100dvh;
+    display: flex;
+    flex-direction: column;
+  }
+  :lang(he) {
+    line-height: 1.75;
+  }
+  h1,
+  h2,
+  h3 {
+    line-height: 1.2;
+    text-wrap: balance;
+  }
+  p {
+    text-wrap: pretty;
+  }
+  a {
+    text-underline-offset: 0.2em;
+  }
+  :focus-visible {
+    outline: 2px solid var(--color-focus);
+    outline-offset: 3px;
+    border-radius: 0.25rem;
+  }
+  ::selection {
+    background: var(--color-accent-soft);
+  }
+  /* Technical strings inside Hebrew prose keep their own direction. */
+  code,
+  kbd,
+  samp,
+  pre {
+    font-family: var(--font-mono);
+    unicode-bidi: isolate;
+    direction: ltr;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Lock background scroll while a modal <dialog> (quick peek, mobile menu) is open. */
+html:has(dialog[open]:modal) {
+  overflow: hidden;
+}
