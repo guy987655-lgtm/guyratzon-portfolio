@@ -65,4 +65,38 @@ export const diagrams: Record<string, L10n> = {
   G --> UI["Hebrew and English UI"]
   K --> UI`,
   },
+  "specv-erd": {
+    he: `erDiagram
+  direction RL
+  dim_visitor ||--o{ fact_visit : ""
+  dim_acquisition ||--o{ fact_visit : ""
+  dim_visitor ||--o{ fact_jd_submission : ""
+  dim_user ||--o{ fact_jd_submission : ""
+  dim_company ||--o{ fact_jd_submission : ""
+  dim_role ||--o{ fact_jd_submission : ""
+  dim_user ||--o{ fact_generation : ""
+  dim_company ||--o{ fact_generation : ""
+  dim_role ||--o{ fact_generation : ""
+  dim_user ||--o{ fact_purchase : ""
+  dim_sku ||--o{ fact_purchase : ""
+  dim_user ||--o{ fact_signup : ""
+  dim_visitor ||--o{ fact_signup : ""
+  dim_acquisition ||--o{ fact_signup : ""`,
+    en: `erDiagram
+  direction LR
+  dim_visitor ||--o{ fact_visit : ""
+  dim_acquisition ||--o{ fact_visit : ""
+  dim_visitor ||--o{ fact_jd_submission : ""
+  dim_user ||--o{ fact_jd_submission : ""
+  dim_company ||--o{ fact_jd_submission : ""
+  dim_role ||--o{ fact_jd_submission : ""
+  dim_user ||--o{ fact_generation : ""
+  dim_company ||--o{ fact_generation : ""
+  dim_role ||--o{ fact_generation : ""
+  dim_user ||--o{ fact_purchase : ""
+  dim_sku ||--o{ fact_purchase : ""
+  dim_user ||--o{ fact_signup : ""
+  dim_visitor ||--o{ fact_signup : ""
+  dim_acquisition ||--o{ fact_signup : ""`,
+  },
 };

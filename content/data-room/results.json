@@ -1,0 +1,144 @@
+{
+  "seed": 20260815,
+  "asOf": "2026-08-15T10:00:15.000Z",
+  "results": {
+    "uploads-before-signup": {
+      "columns": [
+        "month",
+        "jobs_uploaded",
+        "before_signup",
+        "pct_before_signup"
+      ],
+      "rows": [
+        [
+          "2026-08-01",
+          187,
+          76,
+          40.6
+        ],
+        [
+          "2026-07-01",
+          312,
+          152,
+          48.7
+        ],
+        [
+          "2026-06-01",
+          253,
+          169,
+          66.8
+        ],
+        [
+          "2026-05-01",
+          168,
+          113,
+          67.3
+        ],
+        [
+          "2026-04-01",
+          152,
+          103,
+          67.8
+        ],
+        [
+          "2026-03-01",
+          148,
+          113,
+          76.4
+        ]
+      ]
+    },
+    "signup-by-source": {
+      "columns": [
+        "source",
+        "visits",
+        "pasted_a_job",
+        "signed_up",
+        "signup_rate_pct"
+      ],
+      "rows": [
+        [
+          "direct",
+          577,
+          101,
+          49,
+          8.5
+        ],
+        [
+          "social",
+          233,
+          134,
+          56,
+          24
+        ],
+        [
+          "ai",
+          146,
+          77,
+          30,
+          20.5
+        ],
+        [
+          "search",
+          138,
+          77,
+          32,
+          23.2
+        ],
+        [
+          "referral",
+          53,
+          29,
+          10,
+          18.9
+        ]
+      ]
+    },
+    "roles-and-companies": {
+      "columns": [
+        "role_family",
+        "jobs_uploaded",
+        "companies",
+        "spellings_seen"
+      ],
+      "rows": [
+        [
+          "data",
+          319,
+          35,
+          92
+        ],
+        [
+          "other",
+          307,
+          35,
+          93
+        ],
+        [
+          "engineering",
+          245,
+          30,
+          88
+        ],
+        [
+          "marketing",
+          122,
+          32,
+          88
+        ],
+        [
+          "product",
+          121,
+          32,
+          88
+        ],
+        [
+          "research",
+          53,
+          27,
+          81
+        ]
+      ]
+    }
+  }
+}

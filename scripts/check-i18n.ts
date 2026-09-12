@@ -107,7 +107,7 @@ function checkPhysicalCss() {
   }
 }
 
-/** Every diagram a project references must be rendered, from its current source. */
+/** Every diagram must be rendered from its current source (and every referenced one must exist). */
 async function checkDiagrams() {
   const { diagrams } = await import(pathToFileURL(join(ROOT, "content/diagrams.ts")).href);
   const { projects } = await import(pathToFileURL(join(ROOT, "content/projects/index.ts")).href);
@@ -117,15 +117,10 @@ async function checkDiagrams() {
     manifest = JSON.parse(readFileSync(join(ROOT, "public/diagrams/manifest.json"), "utf8"));
   } catch {}
   for (const project of projects as { slug: string; diagram?: string }[]) {
-    const id = project.diagram;
-    if (!id) continue;
-    if (!diagrams[id]) {
-      errors.push(`${project.slug}: diagram "${id}" has no source in content/diagrams.ts`);
-      continue;
-    }
-    if (manifest.diagrams?.[id] !== diagramHash(diagrams[id], ROOT)) {
-      errors.push(`${project.slug}: diagram "${id}" is missing or stale — run npm run render-assets`);
-    }
+    if (project.diagram && !diagrams[project.diagram]) errors.push(`${project.slug}: diagram "${project.diagram}" has no source in content/diagrams.ts`);
+  }
+  for (const [id, source] of Object.entries(diagrams)) {
+    if (manifest.diagrams?.[id] !== diagramHash(source, ROOT)) errors.push(`diagram "${id}" is missing or stale — run npm run render-assets`);
   }
 }
 
