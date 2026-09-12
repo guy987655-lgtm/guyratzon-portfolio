@@ -1,0 +1,23 @@
+{
+  "slug": "ibi",
+  "title": { "he": "תיק ההשקעות ב-IBI", "en": "IBI Portfolio Tracker" },
+  "headline": {
+    "he": "דשבורד פרטי לתיק השקעות: שווי, תשואה, אחזקות, דיבידנדים ותזרים — מוצג כאן על תיק בדוי לגמרי",
+    "en": "A private investment-portfolio dashboard: value, returns, holdings, dividends and cash flow — shown here on an entirely invented portfolio"
+  },
+  "status": "live",
+  "depth": "full",
+  "version": "manual",
+  "updatedAt": "2026-09-13T00:00:00+03:00",
+  "stack": ["JavaScript", "uPlot", "Python", "Vercel Functions"],
+  "facts": [
+    { "label": { "he": "נבנה", "en": "Built" }, "value": { "he": "יולי 2026", "en": "July 2026" } },
+    { "label": { "he": "לשוניות", "en": "Tabs" }, "value": { "he": "6", "en": "6" } }
+  ],
+  "highlights": [],
+  "demoMode": {
+    "supported": false,
+    "note": { "he": "צולם מקומית על תיק בדוי; לאתר עצמו אין קישור ציבורי", "en": "Captured locally on an invented portfolio; the site itself has no public link" }
+  },
+  "locales": ["he"]
+}

@@ -87,6 +87,8 @@ export async function captureRoutes(opts: {
   routes: TourRoute[];
   locales: ("he" | "en")[];
   interceptor?: (route: Route) => Promise<boolean>;
+  /** Runs on each fresh page before navigation (init scripts, e.g. the IBI harness's fixture). */
+  prepare?: (page: Page) => Promise<void>;
   log?: (line: string) => void;
 }): Promise<RawShot[]> {
   const { browser, base, routes, log = console.log } = opts;
@@ -112,6 +114,7 @@ export async function captureRoutes(opts: {
         await guardRequests(context, origin, opts.interceptor);
         const page = await context.newPage();
         await page.clock.setFixedTime(DEMO_NOW);
+        if (opts.prepare) await opts.prepare(page);
         try {
           await page.goto(url.toString(), { waitUntil: "domcontentloaded", timeout: 30_000 });
           await settle(page, url);

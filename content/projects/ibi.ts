@@ -93,6 +93,16 @@ export const ibi: Project = {
     {
       route: "overview",
       caption: { he: "מבט-על: שווי התיק לאורך זמן, הקצאה ואחזקות", en: "Overview: portfolio value over time, allocation and holdings" },
+      callouts: {
+        desktop: [
+          { n: 1, x: 86.2, y: 15.8, text: { he: "שווי כולל: ניירות ומזומן", en: "Total value: securities plus cash" } },
+          { n: 2, x: 71.3, y: 15.8, text: { he: "השינוי מאתמול", en: "The move since yesterday" } },
+          { n: 3, x: 56.5, y: 15.8, text: { he: "רווח מניירות, ממומש ועל הנייר", en: "Gains from securities, realized and on paper" } },
+          { n: 4, x: 41.6, y: 15.8, text: { he: "תשואה כוללת מול סך ההפקדות", en: "Total return against everything deposited" } },
+          { n: 5, x: 86.8, y: 32.8, text: { he: "שווי התיק (כחול) מול ההפקדות נטו (מקווקו); ירוק = ברווח", en: "Portfolio value (blue) against net deposits (dashed); green means ahead" } },
+          { n: 6, x: 86.8, y: 86.8, text: { he: "פילוח לפי נייר, כולל מזומן", en: "Allocation by security, cash included" } },
+        ],
+      },
     },
     {
       route: "today",
@@ -101,6 +111,13 @@ export const ibi: Project = {
     {
       route: "instrument",
       caption: { he: "נייר בודד: גרף מחיר מול מדד, עם כל קנייה ומכירה מסומנת", en: "Single security: price against a benchmark, every trade marked" },
+      callouts: {
+        desktop: [
+          { n: 1, x: 25.5, y: 55.5, text: { he: "קנייה, מסומנת על הגרף בתאריך ובמחיר שלה", en: "A buy, marked on the chart at its date and price" } },
+          { n: 2, x: 75.8, y: 40.5, text: { he: "מכירה חלקית", en: "A partial sale" } },
+          { n: 3, x: 86.5, y: 77.6, text: { he: "כל עסקה, עם רווח ממומש ורווח על הנייר בנפרד", en: "Every trade, with realized and paper gains kept apart" } },
+        ],
+      },
     },
     {
       route: "cashflow",
