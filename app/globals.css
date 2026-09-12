@@ -18,7 +18,7 @@
 }
 
 @theme {
-  --font-sans: var(--font-inter, ui-sans-serif), var(--font-heebo, system-ui), ui-sans-serif, system-ui, "Segoe UI", Arial, sans-serif;
+  --font-sans: var(--font-heebo, system-ui), ui-sans-serif, system-ui, "Segoe UI", Arial, sans-serif;
   --font-mono: ui-monospace, "SF Mono", Menlo, Consolas, monospace;
 
   --color-paper: light-dark(#f8f6f1, #111312);

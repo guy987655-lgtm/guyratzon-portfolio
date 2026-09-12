@@ -12,6 +12,8 @@ const nextConfig: NextConfig = {
   skipTrailingSlashRedirect: true,
   experimental: {
     globalNotFound: true,
+    // Inline the (small) stylesheet into the HTML: one less render-blocking request on slow networks.
+    inlineCss: true,
   },
   images: {
     formats: ["image/webp"],

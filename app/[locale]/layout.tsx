@@ -1,5 +1,5 @@
 import type { Viewport } from "next";
-import { Heebo, Inter } from "next/font/google";
+import { Heebo } from "next/font/google";
 import { notFound } from "next/navigation";
 import { Analytics } from "@/components/Analytics";
 import { EntryTracker } from "@/components/EntryTracker";
@@ -12,9 +12,8 @@ import { getMessages } from "@/messages";
 import { projectNavItems } from "@/content/projects";
 import "../globals.css";
 
-// One stack for both languages: Inter carries Latin, Heebo carries Hebrew (browser picks per glyph).
-const inter = Inter({ subsets: ["latin"], variable: "--font-inter", display: "swap" });
-const heebo = Heebo({ subsets: ["hebrew"], variable: "--font-heebo", display: "swap" });
+// One family for both languages: Heebo carries Hebrew and Latin (the browser fetches only the subsets a page uses).
+const heebo = Heebo({ subsets: ["hebrew", "latin"], variable: "--font-heebo", display: "swap" });
 
 export const dynamicParams = false;
 
@@ -38,7 +37,7 @@ export default async function LocaleLayout({ children, params }: LayoutProps<"/[
   const m = getMessages(locale);
 
   return (
-    <html lang={locale} dir={dirOf(locale)} className={`${inter.variable} ${heebo.variable}`} suppressHydrationWarning>
+    <html lang={locale} dir={dirOf(locale)} className={heebo.variable} suppressHydrationWarning>
       <head>
         <script dangerouslySetInnerHTML={{ __html: THEME_SCRIPT }} />
       </head>

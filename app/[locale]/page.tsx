@@ -50,8 +50,9 @@ export default async function HomePage({ params }: PageProps<"/[locale]">) {
   return (
     <>
       <HomeView />
+      {/* On phones the intro fills the first screen and the menu starts one scroll down. */}
       <section className="border-b border-line bg-[radial-gradient(ellipse_at_top,var(--color-accent-soft),transparent_60%)]">
-        <div className="mx-auto max-w-6xl px-4 pb-16 pt-14 sm:px-6 sm:pb-24 sm:pt-20">
+        <div className="mx-auto flex max-w-6xl flex-col justify-center px-4 pb-16 pt-14 max-sm:min-h-[calc(100svh-4rem)] sm:px-6 sm:pb-24 sm:pt-20">
           <p className="text-sm font-semibold tracking-wide text-accent">{m.home.role}</p>
           <h1 className="mt-3 text-5xl font-bold tracking-tight sm:text-6xl">{m.home.name}</h1>
           <p className="mt-6 max-w-2xl text-lg sm:text-xl">{m.home.lead}</p>

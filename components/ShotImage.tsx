@@ -11,6 +11,7 @@ export function ShotImage({
   alt,
   sizes,
   priority = false,
+  eager = false,
   className = "",
 }: {
   light: Shot | null;
@@ -18,6 +19,8 @@ export function ShotImage({
   alt: string;
   sizes: string;
   priority?: boolean;
+  /** Load without lazy-loading (above-the-fold images that shouldn't compete as a preload). */
+  eager?: boolean;
   className?: string;
 }) {
   const same = !light || !dark || light.file === dark.file;
@@ -32,6 +35,7 @@ export function ShotImage({
       height={shot.height}
       sizes={sizes}
       priority={priority}
+      loading={priority ? undefined : eager ? "eager" : undefined}
       quality={75}
       className={`${className} ${extra}`}
     />

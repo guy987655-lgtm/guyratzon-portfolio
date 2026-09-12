@@ -18,7 +18,7 @@ import { he } from "../messages/he";
 const ROOT = process.cwd();
 const channel = process.argv.includes("--channel") ? process.argv[process.argv.indexOf("--channel") + 1] : undefined;
 const mermaidVersion = JSON.parse(readFileSync(join(ROOT, "node_modules/mermaid/package.json"), "utf8")).version as string;
-const FONTS = `<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=block">`;
+const FONTS = `<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600;700&display=block">`;
 
 async function renderDiagrams(browser: import("@playwright/test").Browser) {
   const outDir = join(ROOT, "public", "diagrams");
@@ -27,7 +27,7 @@ async function renderDiagrams(browser: import("@playwright/test").Browser) {
   const page = await browser.newPage();
   // Same families the site uses, so label widths measured here match the page exactly.
   await page.setContent(
-    `<!doctype html><html><head>${FONTS}<style>:root{--font-inter:'Inter';--font-heebo:'Heebo'}body{margin:0;line-height:1.5;font-family:var(--font-inter),var(--font-heebo),sans-serif}</style></head><body></body></html>`,
+    `<!doctype html><html><head>${FONTS}<style>:root{--font-heebo:'Heebo'}body{margin:0;line-height:1.5;font-family:var(--font-heebo),sans-serif}</style></head><body></body></html>`,
   );
   await page.evaluate(() => document.fonts.ready.then(() => undefined));
   await page.addScriptTag({ path: join(ROOT, "node_modules/mermaid/dist/mermaid.min.js") });
@@ -40,9 +40,9 @@ async function renderDiagrams(browser: import("@playwright/test").Browser) {
             startOnLoad: false,
             securityLevel: "strict",
             theme: "base",
-            fontFamily: "var(--font-inter), var(--font-heebo), sans-serif",
+            fontFamily: "var(--font-heebo), sans-serif",
             themeVariables: {
-              fontFamily: "var(--font-inter), var(--font-heebo), sans-serif",
+              fontFamily: "var(--font-heebo), sans-serif",
               fontSize: "15px",
               primaryColor: "#ffffff",
               primaryTextColor: "#1c1b19",
@@ -72,7 +72,7 @@ function ogHtml(title: string, subtitle: string, locale: "he" | "en") {
   const dir = locale === "he" ? "rtl" : "ltr";
   const tag = locale === "he" ? "תיק עבודות · גיא רצון" : "Portfolio · Guy Ratzon";
   return `<!doctype html><html lang="${locale}" dir="${dir}"><head>${FONTS}<style>
-    *{box-sizing:border-box}body{margin:0;width:1200px;height:630px;font-family:'Inter','Heebo',sans-serif;
+    *{box-sizing:border-box}body{margin:0;width:1200px;height:630px;font-family:'Heebo',sans-serif;
     background:radial-gradient(ellipse at top, #e3efe9, #f8f6f1 65%);color:#1c1b19;display:flex;flex-direction:column;justify-content:space-between;padding:72px 80px}
     .tag{font-size:26px;font-weight:600;color:#1f5f4a}.title{font-size:84px;font-weight:700;letter-spacing:-.02em;line-height:1.05;margin:0}
     .sub{font-size:34px;color:#5b574f;margin-top:22px;line-height:1.35;max-width:980px}.bar{height:10px;width:160px;border-radius:99px;background:#1f5f4a}

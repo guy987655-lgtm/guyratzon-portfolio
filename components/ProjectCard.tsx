@@ -36,7 +36,7 @@ export function ProjectCard({ exhibit, locale, featured = false }: { exhibit: Ex
             dark={first.dark}
             alt=""
             sizes={imageSizes}
-            priority={featured}
+            eager={featured}
             className={`absolute inset-0 h-full w-full object-cover object-top transition-opacity duration-200 ${second ? "group-hover:opacity-0 group-focus-within:opacity-0" : ""}`}
           />
         )}

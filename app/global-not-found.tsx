@@ -1,13 +1,12 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { Heebo, Inter } from "next/font/google";
+import { Heebo } from "next/font/google";
 import { THEME_SCRIPT } from "@/lib/theme";
 import { he } from "@/messages/he";
 import { en } from "@/messages/en";
 import "./globals.css";
 
-const inter = Inter({ subsets: ["latin"], variable: "--font-inter", display: "swap" });
-const heebo = Heebo({ subsets: ["hebrew"], variable: "--font-heebo", display: "swap" });
+const heebo = Heebo({ subsets: ["hebrew", "latin"], variable: "--font-heebo", display: "swap" });
 
 export const metadata: Metadata = {
   title: `${he.notFound.title} · ${en.notFound.title}`,
@@ -17,7 +16,7 @@ export const metadata: Metadata = {
 /** Unmatched URLs outside any locale. We can't know the language here, so both are shown. */
 export default function GlobalNotFound() {
   return (
-    <html lang="he" dir="rtl" className={`${inter.variable} ${heebo.variable}`} suppressHydrationWarning>
+    <html lang="he" dir="rtl" className={heebo.variable} suppressHydrationWarning>
       <head>
         <script dangerouslySetInnerHTML={{ __html: THEME_SCRIPT }} />
       </head>
