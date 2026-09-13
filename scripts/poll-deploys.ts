@@ -11,8 +11,9 @@ const stateFile = process.argv[2] ?? ".deploy-state.json";
 const token = process.env.VERCEL_TOKEN;
 const team = process.env.VERCEL_TEAM_ID;
 if (!token) {
-  console.error("VERCEL_TOKEN is not set");
-  process.exit(1);
+  // Not configured yet (the secret is added by Guy): nothing to compare, and no failure emails.
+  console.error("VERCEL_TOKEN is not set — skipping");
+  process.exit(0);
 }
 
 const state: Record<string, string> = existsSync(stateFile) ? JSON.parse(readFileSync(stateFile, "utf8")) : {};
