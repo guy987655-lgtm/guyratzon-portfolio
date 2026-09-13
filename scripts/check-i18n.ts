@@ -4,14 +4,15 @@
  *  - any {he, en} content value with an empty side
  *  - English identical to a Hebrew string that contains Hebrew letters (forgotten translation)
  *  - physical-direction Tailwind classes (ml-, pr-, left-, text-right, …) outside data-physical lines
- *  - TODO(guy) markers — only in strict mode (--strict, or a Vercel production build); a warning otherwise
+ *  - TODO(guy) markers — only in strict mode (--strict, or INDEXING=true, i.e. the public launch);
+ *    a warning otherwise, so the noindexed site can go up for Guy's review with the markers visible
  */
 import { readdirSync, readFileSync, statSync } from "node:fs";
 import { join, relative } from "node:path";
 import { pathToFileURL } from "node:url";
 
 const ROOT = process.cwd();
-const strict = process.argv.includes("--strict") || process.env.VERCEL_ENV === "production";
+const strict = process.argv.includes("--strict") || process.env.INDEXING === "true";
 const errors: string[] = [];
 const warnings: string[] = [];
 const HEBREW = /[֐-׿]/;

@@ -8,7 +8,7 @@ export PATH="$HOME/.local/nodejs/bin:$PATH"   # Node 24 lives here on Guy's Mac
 npm install
 npm run dev          # http://localhost:3000 → redirects to /he or /en
 npm run check        # translations, types, lint, unit tests
-npm run build        # check-i18n runs first; TODO(guy) blocks production builds only
+npm run build        # check-i18n runs first; TODO(guy) blocks the build only once INDEXING=true (launch)
 PW_CHANNEL=chrome npx playwright test   # e2e, accessibility, LCP under slow 4G
 ```
 
@@ -28,7 +28,8 @@ PW_CHANNEL=chrome npx playwright test   # e2e, accessibility, LCP under slow 4G
 
 - Every prose value is `{ he, en }`. `check-i18n` fails on an empty side, a copied Hebrew string, physical CSS
   (`ml-`, `text-right`…) or a stale diagram.
-- Anything only Guy can confirm is marked `TODO(guy)`. Allowed in dev and previews, **fails the production build**.
+- Anything only Guy can confirm is marked `TODO(guy)`. Allowed while the site is noindexed for review;
+  **fails the build once `INDEXING=true`** (launch).
 - No real data, anywhere: no amounts, holdings, weights, names of real people. Screens come only from demo modes.
 
 ## Screenshots: capture → review → publish
@@ -62,7 +63,7 @@ dataset, runs the ETL and the three queries, and saves `content/data-room/result
 
 ## Launch (only after Guy's explicit approval of the review pass)
 
-1. Resolve every `TODO(guy)` (a production build won't pass until then).
+1. Resolve every `TODO(guy)` (with `INDEXING=true` the build won't pass until then).
 2. `SITE_URL=https://guyratzon.vercel.app npx tsx scripts/generate-qr.ts` → `qr/qr-{he,en}-{light,dark}.svg` + previews.
 3. Embed in the résumé with the domain printed beside it and "סרקו כדי לראות את תיק העבודות" / "Scan to see my portfolio".
    Print at ≥ 2 × 2 cm; test scans from Android and iPhone, 20 cm away, in low light, and from the PDF on screen.
