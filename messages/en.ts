@@ -36,9 +36,9 @@ export const en: Messages = {
     menuLead: "Five pieces of work, and a suggestion where to start.",
     howTitle: "How I work",
     howPoints: [
-      "Start from the question, not the tool: what has to be true for this to work?",
+      "Start from the need, not from what exists: when no tool fits, I build one.",
+      "Every idea goes through a PRD: background, current state, desired state, and what it solves.",
       "Build with Claude Code, and step in wherever judgment matters: the data model, privacy, what to measure.",
-      "Close the loop with measurement: define the events up front, check a week later whether the assumptions held.",
     ],
     howLink: "The full page",
     freshness: "Every screen was captured automatically from the live sites, in demo mode. Last update: {date}.",
