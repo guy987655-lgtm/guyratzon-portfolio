@@ -1,8 +1,8 @@
 {
   "slug": "worldcup",
   "mode": "auto",
-  "capturedAt": "2026-09-12T17:50:16.403Z",
-  "source": "http://localhost:4103",
+  "capturedAt": "2026-09-20T09:53:06.188Z",
+  "source": "https://world-cup-2026-alpha-beryl.vercel.app",
   "manifestVersion": "1.1.0",
   "shots": [
     {
@@ -12,10 +12,10 @@
       "theme": "any",
       "width": 780,
       "height": 1688,
-      "file": "/exhibit/worldcup/schedule-he-he-mobile-any.082620c861.webp",
-      "hash": "082620c861",
-      "capturedAt": "2026-09-12T17:50:16.403Z",
-      "status": "new"
+      "file": "/exhibit/worldcup/schedule-he-he-mobile-any.959b591aa6.webp",
+      "hash": "959b591aa6",
+      "capturedAt": "2026-09-20T09:53:06.188Z",
+      "status": "changed"
     },
     {
       "route": "schedule-he",
@@ -24,10 +24,10 @@
       "theme": "any",
       "width": 2160,
       "height": 1350,
-      "file": "/exhibit/worldcup/schedule-he-he-desktop-any.453cd88831.webp",
-      "hash": "453cd88831",
-      "capturedAt": "2026-09-12T17:50:16.403Z",
-      "status": "new"
+      "file": "/exhibit/worldcup/schedule-he-he-desktop-any.38660523f0.webp",
+      "hash": "38660523f0",
+      "capturedAt": "2026-09-20T09:53:06.188Z",
+      "status": "changed"
     },
     {
       "route": "schedule-en",
@@ -36,10 +36,10 @@
       "theme": "any",
       "width": 780,
       "height": 1688,
-      "file": "/exhibit/worldcup/schedule-en-en-mobile-any.636f69e671.webp",
-      "hash": "636f69e671",
-      "capturedAt": "2026-09-12T17:50:16.403Z",
-      "status": "new"
+      "file": "/exhibit/worldcup/schedule-en-en-mobile-any.487a7e889a.webp",
+      "hash": "487a7e889a",
+      "capturedAt": "2026-09-20T09:53:06.188Z",
+      "status": "changed"
     },
     {
       "route": "schedule-en",
@@ -48,10 +48,10 @@
       "theme": "any",
       "width": 2160,
       "height": 1350,
-      "file": "/exhibit/worldcup/schedule-en-en-desktop-any.6041841284.webp",
-      "hash": "6041841284",
-      "capturedAt": "2026-09-12T17:50:16.403Z",
-      "status": "new"
+      "file": "/exhibit/worldcup/schedule-en-en-desktop-any.aa2adf435a.webp",
+      "hash": "aa2adf435a",
+      "capturedAt": "2026-09-20T09:53:06.188Z",
+      "status": "changed"
     },
     {
       "route": "bracket-he",
@@ -60,10 +60,10 @@
       "theme": "any",
       "width": 780,
       "height": 1688,
-      "file": "/exhibit/worldcup/bracket-he-he-mobile-any.95bf210f8a.webp",
-      "hash": "95bf210f8a",
-      "capturedAt": "2026-09-12T17:50:16.403Z",
-      "status": "new"
+      "file": "/exhibit/worldcup/bracket-he-he-mobile-any.ed73c1140c.webp",
+      "hash": "ed73c1140c",
+      "capturedAt": "2026-09-20T09:53:06.188Z",
+      "status": "changed"
     },
     {
       "route": "bracket-he",
@@ -72,10 +72,10 @@
       "theme": "any",
       "width": 2160,
       "height": 1350,
-      "file": "/exhibit/worldcup/bracket-he-he-desktop-any.23496547a0.webp",
-      "hash": "23496547a0",
-      "capturedAt": "2026-09-12T17:50:16.403Z",
-      "status": "new"
+      "file": "/exhibit/worldcup/bracket-he-he-desktop-any.a90f95ce71.webp",
+      "hash": "a90f95ce71",
+      "capturedAt": "2026-09-20T09:53:06.188Z",
+      "status": "changed"
     },
     {
       "route": "bracket-en",
@@ -84,10 +84,10 @@
       "theme": "any",
       "width": 780,
       "height": 1688,
-      "file": "/exhibit/worldcup/bracket-en-en-mobile-any.bf6f7566ba.webp",
-      "hash": "bf6f7566ba",
-      "capturedAt": "2026-09-12T17:50:16.403Z",
-      "status": "new"
+      "file": "/exhibit/worldcup/bracket-en-en-mobile-any.9155acdc8b.webp",
+      "hash": "9155acdc8b",
+      "capturedAt": "2026-09-20T09:53:06.188Z",
+      "status": "changed"
     },
     {
       "route": "bracket-en",
@@ -96,10 +96,10 @@
       "theme": "any",
       "width": 2160,
       "height": 1350,
-      "file": "/exhibit/worldcup/bracket-en-en-desktop-any.27603e1f41.webp",
-      "hash": "27603e1f41",
-      "capturedAt": "2026-09-12T17:50:16.403Z",
-      "status": "new"
+      "file": "/exhibit/worldcup/bracket-en-en-desktop-any.8797ddf286.webp",
+      "hash": "8797ddf286",
+      "capturedAt": "2026-09-20T09:53:06.188Z",
+      "status": "changed"
     }
   ]
 }

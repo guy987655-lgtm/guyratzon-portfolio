@@ -1,8 +1,8 @@
 {
   "slug": "piggybank",
   "mode": "auto",
-  "capturedAt": "2026-09-12T17:49:59.871Z",
-  "source": "http://localhost:4102",
+  "capturedAt": "2026-09-20T09:52:44.905Z",
+  "source": "https://pigi-cal.vercel.app",
   "manifestVersion": "1.1.0",
   "shots": [
     {
@@ -12,10 +12,10 @@
       "theme": "any",
       "width": 780,
       "height": 1688,
-      "file": "/exhibit/piggybank/calendar-en-mobile-any.eedc48b8df.webp",
-      "hash": "eedc48b8df",
-      "capturedAt": "2026-09-12T17:49:59.871Z",
-      "status": "new"
+      "file": "/exhibit/piggybank/calendar-en-mobile-any.c8c688b99c.webp",
+      "hash": "c8c688b99c",
+      "capturedAt": "2026-09-20T09:52:44.905Z",
+      "status": "changed"
     },
     {
       "route": "calendar",
@@ -24,10 +24,10 @@
       "theme": "any",
       "width": 2160,
       "height": 1350,
-      "file": "/exhibit/piggybank/calendar-en-desktop-any.d41b86383a.webp",
-      "hash": "d41b86383a",
-      "capturedAt": "2026-09-12T17:49:59.871Z",
-      "status": "new"
+      "file": "/exhibit/piggybank/calendar-en-desktop-any.2e03f06c65.webp",
+      "hash": "2e03f06c65",
+      "capturedAt": "2026-09-20T09:52:44.905Z",
+      "status": "changed"
     },
     {
       "route": "trends",
@@ -36,10 +36,10 @@
       "theme": "any",
       "width": 780,
       "height": 1688,
-      "file": "/exhibit/piggybank/trends-en-mobile-any.0cbaae5fb6.webp",
-      "hash": "0cbaae5fb6",
-      "capturedAt": "2026-09-12T17:49:59.871Z",
-      "status": "new"
+      "file": "/exhibit/piggybank/trends-en-mobile-any.fa9980a66c.webp",
+      "hash": "fa9980a66c",
+      "capturedAt": "2026-09-20T09:52:44.905Z",
+      "status": "changed"
     },
     {
       "route": "trends",
@@ -48,10 +48,10 @@
       "theme": "any",
       "width": 2160,
       "height": 1350,
-      "file": "/exhibit/piggybank/trends-en-desktop-any.c128765b27.webp",
-      "hash": "c128765b27",
-      "capturedAt": "2026-09-12T17:49:59.871Z",
-      "status": "new"
+      "file": "/exhibit/piggybank/trends-en-desktop-any.bf9edc681e.webp",
+      "hash": "bf9edc681e",
+      "capturedAt": "2026-09-20T09:52:44.905Z",
+      "status": "changed"
     }
   ]
 }

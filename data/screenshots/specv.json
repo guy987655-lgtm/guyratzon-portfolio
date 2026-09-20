@@ -1,8 +1,8 @@
 {
   "slug": "specv",
   "mode": "auto",
-  "capturedAt": "2026-09-12T17:49:46.684Z",
-  "source": "http://localhost:4104",
+  "capturedAt": "2026-09-20T09:52:29.305Z",
+  "source": "https://preci-cv.vercel.app",
   "manifestVersion": "0.1.0",
   "shots": [
     {
@@ -12,10 +12,10 @@
       "theme": "any",
       "width": 780,
       "height": 1688,
-      "file": "/exhibit/specv/workspace-en-mobile-any.39d2e2fee0.webp",
-      "hash": "39d2e2fee0",
-      "capturedAt": "2026-09-12T17:49:46.684Z",
-      "status": "new"
+      "file": "/exhibit/specv/workspace-en-mobile-any.ee78e846ba.webp",
+      "hash": "ee78e846ba",
+      "capturedAt": "2026-09-20T09:52:29.305Z",
+      "status": "changed"
     },
     {
       "route": "workspace",
@@ -24,10 +24,10 @@
       "theme": "any",
       "width": 2160,
       "height": 1350,
-      "file": "/exhibit/specv/workspace-en-desktop-any.eba15d3b18.webp",
-      "hash": "eba15d3b18",
-      "capturedAt": "2026-09-12T17:49:46.684Z",
-      "status": "new"
+      "file": "/exhibit/specv/workspace-en-desktop-any.a7d2d4d74e.webp",
+      "hash": "a7d2d4d74e",
+      "capturedAt": "2026-09-20T09:52:29.305Z",
+      "status": "changed"
     },
     {
       "route": "match-analysis",
@@ -36,10 +36,10 @@
       "theme": "any",
       "width": 780,
       "height": 1688,
-      "file": "/exhibit/specv/match-analysis-en-mobile-any.db4c290586.webp",
-      "hash": "db4c290586",
-      "capturedAt": "2026-09-12T17:49:46.684Z",
-      "status": "new"
+      "file": "/exhibit/specv/match-analysis-en-mobile-any.8329dea021.webp",
+      "hash": "8329dea021",
+      "capturedAt": "2026-09-20T09:52:29.305Z",
+      "status": "changed"
     },
     {
       "route": "match-analysis",
@@ -48,10 +48,10 @@
       "theme": "any",
       "width": 2160,
       "height": 1350,
-      "file": "/exhibit/specv/match-analysis-en-desktop-any.6ada0767a6.webp",
-      "hash": "6ada0767a6",
-      "capturedAt": "2026-09-12T17:49:46.684Z",
-      "status": "new"
+      "file": "/exhibit/specv/match-analysis-en-desktop-any.c64a7608e5.webp",
+      "hash": "c64a7608e5",
+      "capturedAt": "2026-09-20T09:52:29.305Z",
+      "status": "changed"
     },
     {
       "route": "interview",
@@ -60,10 +60,10 @@
       "theme": "any",
       "width": 780,
       "height": 1688,
-      "file": "/exhibit/specv/interview-en-mobile-any.293d203c1d.webp",
-      "hash": "293d203c1d",
-      "capturedAt": "2026-09-12T17:49:46.684Z",
-      "status": "new"
+      "file": "/exhibit/specv/interview-en-mobile-any.2ff6b49bc1.webp",
+      "hash": "2ff6b49bc1",
+      "capturedAt": "2026-09-20T09:52:29.305Z",
+      "status": "changed"
     },
     {
       "route": "interview",
@@ -72,10 +72,10 @@
       "theme": "any",
       "width": 2160,
       "height": 1350,
-      "file": "/exhibit/specv/interview-en-desktop-any.e4880be437.webp",
-      "hash": "e4880be437",
-      "capturedAt": "2026-09-12T17:49:46.684Z",
-      "status": "new"
+      "file": "/exhibit/specv/interview-en-desktop-any.96aeed610c.webp",
+      "hash": "96aeed610c",
+      "capturedAt": "2026-09-20T09:52:29.305Z",
+      "status": "changed"
     },
     {
       "route": "sample",
@@ -84,10 +84,10 @@
       "theme": "any",
       "width": 780,
       "height": 1688,
-      "file": "/exhibit/specv/sample-en-mobile-any.0b9fb58559.webp",
-      "hash": "0b9fb58559",
-      "capturedAt": "2026-09-12T17:49:46.684Z",
-      "status": "new"
+      "file": "/exhibit/specv/sample-en-mobile-any.c30560613c.webp",
+      "hash": "c30560613c",
+      "capturedAt": "2026-09-20T09:52:29.305Z",
+      "status": "changed"
     },
     {
       "route": "sample",
@@ -96,10 +96,10 @@
       "theme": "any",
       "width": 2160,
       "height": 1350,
-      "file": "/exhibit/specv/sample-en-desktop-any.e0344d44ce.webp",
-      "hash": "e0344d44ce",
-      "capturedAt": "2026-09-12T17:49:46.684Z",
-      "status": "new"
+      "file": "/exhibit/specv/sample-en-desktop-any.f73f61655c.webp",
+      "hash": "f73f61655c",
+      "capturedAt": "2026-09-20T09:52:29.305Z",
+      "status": "changed"
     }
   ]
 }
