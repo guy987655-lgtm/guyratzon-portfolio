@@ -32,7 +32,7 @@ export async function generateMetadata({ params }: PageProps<"/[locale]/work/[sl
   return buildMetadata({
     locale,
     path: `/work/${slug}`,
-    title: `${tr(project.title, locale)} — ${m.meta.siteName}`,
+    title: `${tr(project.title, locale)} - ${m.meta.siteName}`,
     description: tr(project.overview, locale),
     ogImage: `/og/${slug}-${locale}.png`,
   });

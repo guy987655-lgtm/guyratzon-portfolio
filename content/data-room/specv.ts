@@ -61,7 +61,7 @@ export const dataRoom = {
       kind: "fact",
       grain: { he: "גרסה אחת של קורות חיים מותאמים למשרה אחת.", en: "One revision of one tailored CV for one job." },
       columns: [
-        { name: "match_score", note: { he: "לא מצטבר — ממוצע בלבד. NULL ולא 0 כשהמודל השמיט את ניתוח הפערים.", en: "Non-additive — average only. NULL, not 0, when the model omitted the gap analysis." } },
+        { name: "match_score", note: { he: "לא מצטבר - ממוצע בלבד. NULL ולא 0 כשהמודל השמיט את ניתוח הפערים.", en: "Non-additive - average only. NULL, not 0, when the model omitted the gap analysis." } },
         { name: "match_score_is_missing", note: { he: "מבדיל בין 'המודל לא החזיר ציון' לבין ציון 0 אמיתי.", en: "Tells 'the model returned no score' apart from a genuine 0." } },
       ],
     },
@@ -104,7 +104,7 @@ export const dataRoom = {
       name: "dim_date",
       kind: "dimension",
       grain: { he: "יום קלנדרי אחד.", en: "One calendar day." },
-      columns: [{ name: "is_weekend", note: { he: "שישי ושבת — החלטה של שוק, לא עובדה קלנדרית.", en: "Friday and Saturday — a market decision, not a calendar fact." } }],
+      columns: [{ name: "is_weekend", note: { he: "שישי ושבת - החלטה של שוק, לא עובדה קלנדרית.", en: "Friday and Saturday - a market decision, not a calendar fact." } }],
     },
   ] satisfies Table[],
   decisionsTitle: { he: "החלטות במודל", en: "Modeling decisions" },
@@ -149,8 +149,8 @@ export const dataRoom = {
       id: "dr-jobs-uploaded",
       title: { he: "'משרות שהועלו' עם יוצא מן הכלל", en: "'Jobs uploaded', with a carve-out" },
       why: {
-        he: "משרה נספרת פעם אחת לכל מבקר מוכר. בגרסה הראשונה, שני אנשים שהגישו לאותה מודעה נספרו כמשרה אחת. זה נתפס כשהנתונים הראו תפקיד עם יותר חברות ממשרות — מצב שלא יכול להתקיים.",
-        en: "A job counts once per known visitor. The first version collapsed two people applying to the same posting into one job. It was caught when the data showed a role with more companies than jobs — which can't happen.",
+        he: "משרה נספרת פעם אחת לכל מבקר מוכר. בגרסה הראשונה, שני אנשים שהגישו לאותה מודעה נספרו כמשרה אחת. זה נתפס כשהנתונים הראו תפקיד עם יותר חברות ממשרות - מצב שלא יכול להתקיים.",
+        en: "A job counts once per known visitor. The first version collapsed two people applying to the same posting into one job. It was caught when the data showed a role with more companies than jobs - which can't happen.",
       },
       tradeoff: {
         he: "כלל שקשה יותר להסביר, וכל שאילתה על משרות חייבת להשתמש בדגל ולא ב-count(*).",
@@ -171,11 +171,11 @@ export const dataRoom = {
       id: "uploads-before-signup",
       question: {
         he: "כמה משרות הועלו בכל חודש, וכמה מהן היו מתפספסות אילו סופרים רק חשבונות רשומים?",
-        en: "How many jobs were uploaded each month — and how many would a count of accounts alone have missed?",
+        en: "How many jobs were uploaded each month - and how many would a count of accounts alone have missed?",
       },
       insight: {
         he: "בנתונים הסינתטיים, בין 41% ל-76% מהמשרות בכל חודש הועלו לפני הרשמה. ספירה של משרות בחשבונות בלבד הייתה מסתירה עד שלוש מכל ארבע העלאות, ולכן שתי הצורות יושבות באותה טבלה.",
-        en: "On the synthetic data, 41% to 76% of each month's jobs were uploaded before signup. Counting account jobs alone would have hidden up to three uploads in four — which is why both sit in one table.",
+        en: "On the synthetic data, 41% to 76% of each month's jobs were uploaded before signup. Counting account jobs alone would have hidden up to three uploads in four - which is why both sit in one table.",
       },
     },
     {
@@ -192,20 +192,20 @@ export const dataRoom = {
     {
       id: "roles-and-companies",
       question: {
-        he: "לאילו תחומים מתאימים קורות חיים, ובכמה חברות — אחרי איחוד האיותים?",
-        en: "Which role families get tailored for, and across how many companies — after spellings are merged?",
+        he: "לאילו תחומים מתאימים קורות חיים, ובכמה חברות - אחרי איחוד האיותים?",
+        en: "Which role families get tailored for, and across how many companies - after spellings are merged?",
       },
       insight: {
-        he: "בכל תחום, 27–35 חברות מגיעות תחת 81–93 איותים שונים. בלי שלב האיחוד, כל חברה הייתה נספרת בממוצע כמעט שלוש פעמים, וכל דירוג של 'חברות מובילות' היה שגוי.",
-        en: "In every family, 27–35 companies arrive under 81–93 different spellings. Without the merge step, each company would be counted nearly three times on average, and any 'top companies' ranking would be wrong.",
+        he: "בכל תחום, 27-35 חברות מגיעות תחת 81-93 איותים שונים. בלי שלב האיחוד, כל חברה הייתה נספרת בממוצע כמעט שלוש פעמים, וכל דירוג של 'חברות מובילות' היה שגוי.",
+        en: "In every family, 27-35 companies arrive under 81-93 different spellings. Without the merge step, each company would be counted nearly three times on average, and any 'top companies' ranking would be wrong.",
       },
     },
   ] satisfies { id: DataRoomQueryId; question: L10n; insight: L10n }[],
   scale: {
     title: { he: "מה היה נשבר בסקייל", en: "What would break at scale" },
     body: {
-      he: "המחסן מתרענן כל שעה ב-pg_cron, בתוך אותו Postgres שמשרת את המוצר, ורענון מלא רץ פעם בשבוע. בנפחים של היום זה זניח. בסקייל, הרענון יתחרה במוצר על אותו מסד, ואיחוד שמות החברות — השוואה רכה בין מחרוזות — צפוי להיות הראשון להאט.\n\nהצעדים הבאים: רענון אינקרמנטלי בלבד לפי watermark, שכבר קיים לרוב השלבים; העברת המחסן למסד נפרד; ומעבר של איחוד השמות מכללים לטבלת כינויים שמתוחזקת חצי-אוטומטית.",
-      en: "The warehouse refreshes hourly on pg_cron inside the same Postgres that serves the product, with a full rebuild weekly. At today's volume that's negligible. At scale, refreshes would compete with the product for one database, and company-name merging — fuzzy string matching — would likely be the first step to slow down.\n\nNext steps: incremental-only refreshes by watermark, which most steps already support; moving the warehouse to its own database; and shifting name merging from rules to a semi-automatically maintained alias table.",
+      he: "המחסן מתרענן כל שעה ב-pg_cron, בתוך אותו Postgres שמשרת את המוצר, ורענון מלא רץ פעם בשבוע. בנפחים של היום זה זניח. בסקייל, הרענון יתחרה במוצר על אותו מסד, ואיחוד שמות החברות - השוואה רכה בין מחרוזות - צפוי להיות הראשון להאט.\n\nהצעדים הבאים: רענון אינקרמנטלי בלבד לפי watermark, שכבר קיים לרוב השלבים; העברת המחסן למסד נפרד; ומעבר של איחוד השמות מכללים לטבלת כינויים שמתוחזקת חצי-אוטומטית.",
+      en: "The warehouse refreshes hourly on pg_cron inside the same Postgres that serves the product, with a full rebuild weekly. At today's volume that's negligible. At scale, refreshes would compete with the product for one database, and company-name merging - fuzzy string matching - would likely be the first step to slow down.\n\nNext steps: incremental-only refreshes by watermark, which most steps already support; moving the warehouse to its own database; and shifting name merging from rules to a semi-automatically maintained alias table.",
     },
   },
 };

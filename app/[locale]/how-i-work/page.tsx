@@ -10,7 +10,7 @@ export async function generateMetadata({ params }: PageProps<"/[locale]/how-i-wo
   const { locale } = await params;
   if (!hasLocale(locale)) return {};
   const m = getMessages(locale);
-  return buildMetadata({ locale, path: "/how-i-work", title: `${tr(howIWork.title, locale)} — ${m.meta.siteName}`, description: tr(howIWork.lead, locale), ogImage: `/og/home-${locale}.png` });
+  return buildMetadata({ locale, path: "/how-i-work", title: `${tr(howIWork.title, locale)} - ${m.meta.siteName}`, description: tr(howIWork.lead, locale), ogImage: `/og/home-${locale}.png` });
 }
 
 export default async function HowIWorkPage({ params }: PageProps<"/[locale]/how-i-work">) {

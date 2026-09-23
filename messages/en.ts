@@ -3,7 +3,7 @@ import type { Messages } from "./he";
 /** English UI strings. Typed against the Hebrew object, so a missing or extra key fails tsc. */
 export const en: Messages = {
   meta: {
-    siteName: "Guy Ratzon — Portfolio",
+    siteName: "Guy Ratzon - Portfolio",
     description:
       "Guy Ratzon's portfolio: five products I built, how I built them, and the calls I made along the way. Every screen shows demo data.",
   },
@@ -71,7 +71,7 @@ export const en: Messages = {
     why: "Why I chose it",
     tradeoff: "What I gave up",
     openLive: "Open the live site",
-    noLive: "No live link — shown only through screenshots of a demo version",
+    noLive: "No live link - shown only through screenshots of a demo version",
     interface: "Interface in {lang}",
     langHe: "Hebrew",
     langEn: "English",

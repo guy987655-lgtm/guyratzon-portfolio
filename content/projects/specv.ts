@@ -74,8 +74,8 @@ export const specv: Project = {
       id: "specv-first-party-funnel",
       title: { he: "משפך משלי לצד פוסטהוג", en: "My own funnel next to PostHog" },
       why: {
-        he: "כל המשפך האנונימי — העלאת קורות חיים, מודעות ושאלון — חי בדפדפן ומגיע לשרת רק אם נרשמים. בלי מזהה מבקר ואירועי משפך בצד השרת, השאלה 'כמה משרות הועלו' סופרת רק את מי ששרד עד ההרשמה.",
-        en: "The whole anonymous funnel — CV upload, postings, questionnaire — lives in the browser and reaches the server only on signup. Without a visitor id and server-side funnel events, 'how many jobs were uploaded' counts only the people who made it to signup.",
+        he: "כל המשפך האנונימי - העלאת קורות חיים, מודעות ושאלון - חי בדפדפן ומגיע לשרת רק אם נרשמים. בלי מזהה מבקר ואירועי משפך בצד השרת, השאלה 'כמה משרות הועלו' סופרת רק את מי ששרד עד ההרשמה.",
+        en: "The whole anonymous funnel - CV upload, postings, questionnaire - lives in the browser and reaches the server only on signup. Without a visitor id and server-side funnel events, 'how many jobs were uploaded' counts only the people who made it to signup.",
       },
       tradeoff: {
         he: "חמש טבלאות לכידה, פונקציות מאובטחות ועוגייה חתומה לתחזק, ומדיניות פרטיות שצריכה לכסות את כולן.",
@@ -96,8 +96,8 @@ export const specv: Project = {
     },
   ],
   whatBroke: {
-    he: "משתמש סיים את כל התהליך — קורות חיים, ארבע מודעות, שאלון והרשמה — ובשלב הייבוא האחרון השרת החזיר שגיאה והכול נעלם. הסיבה: כשהמודל לא מצא שם חברה במודעה, הוא ענה במשפט שלם במקום מחרוזת ריקה, ומשפט של 140 תווים עבר את מגבלת 120 התווים של השדה. משרה אחת עם 'שם חברה' ארוך הפילה איתה את שלוש האחרות. התיקון: שדות שהמודל כותב נחתכים במקום להידחות, ורשומה שאי אפשר לקרוא נושרת לבד בלי לקחת איתה את השאר. תווית קצוצה היא עניין קוסמטי; ייבוא שאבד הוא לא.",
-    en: "A user finished the whole flow — CV, four postings, questionnaire, signup — and the final import returned an error that wiped it all. The cause: when the model found no company name in a posting, it answered with a full sentence instead of an empty string, and 140 characters broke the field's 120-character cap. One job with a long 'company name' took the other three down with it. The fix: fields the model writes are truncated instead of rejected, and an unreadable entry drops out on its own. A clipped label is cosmetic; a lost import isn't.",
+    he: "משתמש סיים את כל התהליך - קורות חיים, ארבע מודעות, שאלון והרשמה - ובשלב הייבוא האחרון השרת החזיר שגיאה והכול נעלם. הסיבה: כשהמודל לא מצא שם חברה במודעה, הוא ענה במשפט שלם במקום מחרוזת ריקה, ומשפט של 140 תווים עבר את מגבלת 120 התווים של השדה. משרה אחת עם 'שם חברה' ארוך הפילה איתה את שלוש האחרות. התיקון: שדות שהמודל כותב נחתכים במקום להידחות, ורשומה שאי אפשר לקרוא נושרת לבד בלי לקחת איתה את השאר. תווית קצוצה היא עניין קוסמטי; ייבוא שאבד הוא לא.",
+    en: "A user finished the whole flow - CV, four postings, questionnaire, signup - and the final import returned an error that wiped it all. The cause: when the model found no company name in a posting, it answered with a full sentence instead of an empty string, and 140 characters broke the field's 120-character cap. One job with a long 'company name' took the other three down with it. The fix: fields the model writes are truncated instead of rejected, and an unreadable entry drops out on its own. A clipped label is cosmetic; a lost import isn't.",
   },
   gallery: [
     {

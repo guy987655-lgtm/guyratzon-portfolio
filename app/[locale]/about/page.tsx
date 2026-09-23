@@ -11,7 +11,7 @@ export async function generateMetadata({ params }: PageProps<"/[locale]/about">)
   const { locale } = await params;
   if (!hasLocale(locale)) return {};
   const m = getMessages(locale);
-  return buildMetadata({ locale, path: "/about", title: `${tr(about.title, locale)} — ${m.meta.siteName}`, description: tr(about.lead, locale), ogImage: `/og/home-${locale}.png` });
+  return buildMetadata({ locale, path: "/about", title: `${tr(about.title, locale)} - ${m.meta.siteName}`, description: tr(about.lead, locale), ogImage: `/og/home-${locale}.png` });
 }
 
 export default async function AboutPage({ params }: PageProps<"/[locale]/about">) {
