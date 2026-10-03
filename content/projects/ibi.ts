@@ -64,8 +64,8 @@ export const ibi: Project = {
       id: "ibi-local-pipeline",
       title: { he: "צנרת נתונים שרצה אצלי", en: "A data pipeline that runs on my machine" },
       why: {
-        he: "דוחות הברוקר נשארים במחשב שלי. לענן מגיע רק קובץ הנתונים המעובד, מאחורי מפתח גישה. TODO(guy): לאשר אחרי תיקון החשיפה בדשבורד",
-        en: "Broker reports stay on my machine. Only the processed data file reaches the cloud, behind an access key. TODO(guy): confirm after the dashboard exposure fix",
+        he: "דוחות הברוקר נשארים במחשב שלי. לענן מגיע רק קובץ הנתונים המעובד, מאחורי מפתח גישה.",
+        en: "Broker reports stay on my machine. Only the processed data file reaches the cloud, behind an access key.",
       },
       tradeoff: {
         he: "העדכון תלוי בי: יום שלא הרצתי את הסקריפט הוא יום שבו הדשבורד מראה נתונים של אתמול.",
@@ -118,6 +118,14 @@ export const ibi: Project = {
           { n: 3, x: 86.5, y: 77.6, text: { he: "כל עסקה, עם רווח ממומש ורווח על הנייר בנפרד", en: "Every trade, with realized and paper gains kept apart" } },
         ],
       },
+    },
+    {
+      route: "transactions",
+      caption: { he: "תנועות: כל קנייה ומכירה, עם סינון לפי סוג, שנה ושוק", en: "Transactions: every buy and sale, filtered by type, year and market" },
+    },
+    {
+      route: "closed",
+      caption: { he: "פוזיציות סגורות: מה הרווחתי בכל מכירה, ומה קרה למחיר מאז", en: "Closed positions: what each sale earned, and where the price went since" },
     },
     {
       route: "cashflow",

@@ -9,8 +9,8 @@ export const piggybank: Project = {
   stack: ["HTML", "CSS", "JavaScript", "SVG", "localStorage"],
   builtAt: "2026-07-17",
   usage: {
-    he: "כלי שבניתי לעצמי ומשתמש בו מאז יולי 2026. TODO(guy): לאשר את התאריך ואת השימוש",
-    en: "A tool I built for myself and have used since July 2026. TODO(guy): confirm the date and the use",
+    he: "כלי שבניתי לעצמי ומשתמש בו מאז יולי 2026.",
+    en: "A tool I built for myself and have used since July 2026.",
   },
   interfaceLocales: ["en"],
   preferDevice: "mobile",

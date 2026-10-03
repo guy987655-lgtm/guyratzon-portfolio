@@ -5,7 +5,6 @@ export const specv: Project = {
   title: { he: "SpeCV", en: "SpeCV" },
   tagline: { he: "התאמת קורות חיים למשרה ספציפית", en: "Tailors a résumé to one specific job" },
   depth: "full",
-  recommended: true,
   liveUrl: "https://preci-cv.vercel.app/demo",
   stack: ["Next.js 16", "React 19", "TypeScript", "Tailwind CSS", "Supabase", "Postgres", "Claude API", "PostHog", "Vercel"],
   builtAt: "2026-07-03",

@@ -10,8 +10,8 @@ export const worldcup: Project = {
   stack: ["Vite", "JavaScript", "ESPN API", "Vercel Analytics"],
   builtAt: "2026-06-06",
   usage: {
-    he: "אתר שבניתי לקראת המונדיאל ותחזקתי לאורך כל הטורניר. TODO(guy): לאשר, ולהוסיף למי הוא נבנה",
-    en: "A site I built ahead of the World Cup and maintained throughout the tournament. TODO(guy): confirm, and add who it was for",
+    he: "אתר שבניתי לקראת המונדיאל ותחזקתי לאורך כל הטורניר.",
+    en: "A site I built ahead of the World Cup and maintained throughout the tournament.",
   },
   interfaceLocales: ["he", "en"],
   cardFact: { he: "104 משחקים, בעברית ובאנגלית", en: "104 matches, in Hebrew and English" },
@@ -34,8 +34,8 @@ export const worldcup: Project = {
     },
   ],
   problem: {
-    he: "לוחות המשחקים הרשמיים כתובים בשעון אמריקאי ובאנגלית, ולא עונים על השאלה שעניינה אותנו בבית: איזה משחק טוב אפשר לראות עם הילדים הערב. TODO(guy): לאשר",
-    en: "Official schedules are in US time and in English, and don't answer the question we actually had at home: which good match can we watch with the kids tonight? TODO(guy): confirm",
+    he: "לוחות המשחקים הרשמיים כתובים בשעון אמריקאי ובאנגלית, ולא עונים על השאלה שעניינה אותנו בבית: איזה משחק טוב אפשר לראות עם הילדים הערב.",
+    en: "Official schedules are in US time and in English, and don't answer the question we actually had at home: which good match can we watch with the kids tonight?",
   },
   approach: {
     he: "לוח המשחקים הוא קובץ JSON סטטי, כך שהוא נטען תמיד. מעליו נמזגת שכבה חיה מה-API הציבורי של ESPN: תוצאות, מבקיעים, החזקת כדור, כושר ויחסים. משחקי בתים מחוברים לפי צמד הנבחרות והתאריך, ומשחקי נוקאאוט לפי משבצת התאריך והשעה, כי שמות הנבחרות לא ידועים מראש.\n\nכל הממשק כתוב פעמיים, בעברית מימין לשמאל ובאנגלית משמאל לימין, כולל שמות נבחרות, שלבים ומשפטי ההסבר. בחירת אזור זמן מעדכנת את השעות וגם את חלון השעות של הילדים.",

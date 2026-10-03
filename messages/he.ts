@@ -45,7 +45,6 @@ export const he = {
     freshness: "כל התצוגות צולמו אוטומטית מהאתרים החיים, בגרסת הדגמה. עדכון אחרון: {date}.",
   },
   card: {
-    recommended: "מומלץ להתחיל כאן",
     quickLook: "הצצה מהירה",
     fullStory: "הסיפור המלא",
     updated: "עודכן {when}",

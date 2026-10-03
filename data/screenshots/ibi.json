@@ -1,7 +1,7 @@
 {
   "slug": "ibi",
   "mode": "manual",
-  "capturedAt": "2026-09-12T22:14:16.309Z",
+  "capturedAt": "2026-10-03T08:49:24.792Z",
   "source": "http://127.0.0.1:4199",
   "manifestVersion": "manual",
   "shots": [
@@ -111,7 +111,7 @@
       "file": "/exhibit/ibi/manual/instrument-he-mobile-light.5531d136f4.webp",
       "hash": "5531d136f4",
       "capturedAt": "2026-09-12T22:14:16.309Z",
-      "status": "changed"
+      "status": "unchanged"
     },
     {
       "route": "instrument",
@@ -123,7 +123,7 @@
       "file": "/exhibit/ibi/manual/instrument-he-mobile-dark.24a1173809.webp",
       "hash": "24a1173809",
       "capturedAt": "2026-09-12T22:14:16.309Z",
-      "status": "changed"
+      "status": "unchanged"
     },
     {
       "route": "instrument",
@@ -135,7 +135,7 @@
       "file": "/exhibit/ibi/manual/instrument-he-desktop-light.9394350596.webp",
       "hash": "9394350596",
       "capturedAt": "2026-09-12T22:14:16.309Z",
-      "status": "changed"
+      "status": "unchanged"
     },
     {
       "route": "instrument",
@@ -147,7 +147,103 @@
       "file": "/exhibit/ibi/manual/instrument-he-desktop-dark.6a2aea1676.webp",
       "hash": "6a2aea1676",
       "capturedAt": "2026-09-12T22:14:16.309Z",
-      "status": "changed"
+      "status": "unchanged"
+    },
+    {
+      "route": "transactions",
+      "locale": "he",
+      "device": "mobile",
+      "theme": "light",
+      "width": 780,
+      "height": 1688,
+      "file": "/exhibit/ibi/manual/transactions-he-mobile-light.11f815a1ad.webp",
+      "hash": "11f815a1ad",
+      "capturedAt": "2026-10-03T08:49:24.792Z",
+      "status": "new"
+    },
+    {
+      "route": "transactions",
+      "locale": "he",
+      "device": "mobile",
+      "theme": "dark",
+      "width": 780,
+      "height": 1688,
+      "file": "/exhibit/ibi/manual/transactions-he-mobile-dark.c81c04c9b5.webp",
+      "hash": "c81c04c9b5",
+      "capturedAt": "2026-10-03T08:49:24.792Z",
+      "status": "new"
+    },
+    {
+      "route": "transactions",
+      "locale": "he",
+      "device": "desktop",
+      "theme": "light",
+      "width": 2160,
+      "height": 1350,
+      "file": "/exhibit/ibi/manual/transactions-he-desktop-light.ccd2f20134.webp",
+      "hash": "ccd2f20134",
+      "capturedAt": "2026-10-03T08:49:24.792Z",
+      "status": "new"
+    },
+    {
+      "route": "transactions",
+      "locale": "he",
+      "device": "desktop",
+      "theme": "dark",
+      "width": 2160,
+      "height": 1350,
+      "file": "/exhibit/ibi/manual/transactions-he-desktop-dark.130ed75ab3.webp",
+      "hash": "130ed75ab3",
+      "capturedAt": "2026-10-03T08:49:24.792Z",
+      "status": "new"
+    },
+    {
+      "route": "closed",
+      "locale": "he",
+      "device": "mobile",
+      "theme": "light",
+      "width": 780,
+      "height": 1688,
+      "file": "/exhibit/ibi/manual/closed-he-mobile-light.65148d6b2f.webp",
+      "hash": "65148d6b2f",
+      "capturedAt": "2026-10-03T08:49:24.792Z",
+      "status": "new"
+    },
+    {
+      "route": "closed",
+      "locale": "he",
+      "device": "mobile",
+      "theme": "dark",
+      "width": 780,
+      "height": 1688,
+      "file": "/exhibit/ibi/manual/closed-he-mobile-dark.7408817e6b.webp",
+      "hash": "7408817e6b",
+      "capturedAt": "2026-10-03T08:49:24.792Z",
+      "status": "new"
+    },
+    {
+      "route": "closed",
+      "locale": "he",
+      "device": "desktop",
+      "theme": "light",
+      "width": 2160,
+      "height": 1350,
+      "file": "/exhibit/ibi/manual/closed-he-desktop-light.76f36bc4fb.webp",
+      "hash": "76f36bc4fb",
+      "capturedAt": "2026-10-03T08:49:24.792Z",
+      "status": "new"
+    },
+    {
+      "route": "closed",
+      "locale": "he",
+      "device": "desktop",
+      "theme": "dark",
+      "width": 2160,
+      "height": 1350,
+      "file": "/exhibit/ibi/manual/closed-he-desktop-dark.f457819ec8.webp",
+      "hash": "f457819ec8",
+      "capturedAt": "2026-10-03T08:49:24.792Z",
+      "status": "new"
     },
     {
       "route": "cashflow",
