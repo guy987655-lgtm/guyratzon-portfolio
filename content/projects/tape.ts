@@ -12,15 +12,15 @@ export const tape: Project = {
   stack: ["HTML", "CSS", "JavaScript", "localStorage"],
   builtAt: "2026-05-19",
   usage: {
-    he: "כלי שבניתי לעצמי ומשתמש בו מאז מאי 2026. TODO(guy): לאשר את התאריך ואת השימוש",
-    en: "A tool I built for myself and have used since May 2026. TODO(guy): confirm the date and the use",
+    he: "כלי שבניתי לעצמי ומשתמש בו מאז מאי 2026.",
+    en: "A tool I built for myself and have used since May 2026.",
   },
   interfaceLocales: ["en"],
   preferDevice: "mobile",
   cardFact: { he: "קובץ HTML אחד, בלי תלויות", en: "One HTML file, zero dependencies" },
   overview: {
-    he: "מחשבון עם סרט, כמו של פעם: כל חישוב נשאר על הסרט, עם הערה לצידו. אני משתמש בו לתקציב חודשי: מתחילים מסכום, כל הוצאה מקזזת, ורואים כמה נשאר עד האיפוס. TODO(guy): לאשר את תיאור השימוש",
-    en: "A calculator with a paper-style tape: every calculation stays on the tape, with a note beside it. I use it for a monthly budget: start from an amount, subtract each expense, see what's left until the reset. TODO(guy): confirm the use case",
+    he: "מחשבון עם סרט, כמו של פעם: כל חישוב נשאר על הסרט, עם הערה לצידו. אני משתמש בו לתקציב חודשי: מתחילים מסכום, כל הוצאה מקזזת, ורואים כמה נשאר עד האיפוס.",
+    en: "A calculator with a paper-style tape: every calculation stays on the tape, with a note beside it. I use it for a monthly budget: start from an amount, subtract each expense, see what's left until the reset.",
   },
   peek: [
     {
@@ -62,8 +62,8 @@ export const tape: Project = {
       id: "tape-integers",
       title: { he: "רק מספרים שלמים", en: "Whole numbers only" },
       why: {
-        he: "בתקציב, אגורות הן רעש. ביטול הנקודה העשרונית פינה מקום במקלדת לכפתור 00 וחסך טעויות הקלדה. TODO(guy): לאשר את הנימוק",
-        en: "In a budget, cents are noise. Dropping the decimal point freed a key for 00 and removed a class of typos. TODO(guy): confirm the reasoning",
+        he: "בתקציב, אגורות הן רעש. ביטול הנקודה העשרונית פינה מקום במקלדת לכפתור 00 וחסך טעויות הקלדה.",
+        en: "In a budget, cents are noise. Dropping the decimal point freed a key for 00 and removed a class of typos.",
       },
       tradeoff: {
         he: "המחשבון לא מתאים לחישובים מדויקים כמו ריבית או המרת מטבע.",

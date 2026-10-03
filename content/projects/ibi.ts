@@ -64,8 +64,8 @@ export const ibi: Project = {
       id: "ibi-local-pipeline",
       title: { he: "צנרת נתונים שרצה אצלי", en: "A data pipeline that runs on my machine" },
       why: {
-        he: "דוחות הברוקר נשארים במחשב שלי. לענן מגיע רק קובץ הנתונים המעובד, מאחורי מפתח גישה. TODO(guy): לאשר אחרי תיקון החשיפה בדשבורד",
-        en: "Broker reports stay on my machine. Only the processed data file reaches the cloud, behind an access key. TODO(guy): confirm after the dashboard exposure fix",
+        he: "דוחות הברוקר נשארים במחשב שלי. לענן מגיע רק קובץ הנתונים המעובד, מאחורי מפתח גישה.",
+        en: "Broker reports stay on my machine. Only the processed data file reaches the cloud, behind an access key.",
       },
       tradeoff: {
         he: "העדכון תלוי בי: יום שלא הרצתי את הסקריפט הוא יום שבו הדשבורד מראה נתונים של אתמול.",
