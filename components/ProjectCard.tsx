@@ -3,7 +3,6 @@ import type { Exhibit } from "@/lib/exhibit/load";
 import { galleryShot } from "@/lib/exhibit/view";
 import { tr, type Locale } from "@/lib/i18n";
 import { getMessages } from "@/messages";
-import { RelativeTime } from "./RelativeTime";
 import { ShotImage } from "./ShotImage";
 
 /**
@@ -11,7 +10,7 @@ import { ShotImage } from "./ShotImage";
  * without JS); "Quick look" is also a real link that JS upgrades into the peek dialog.
  */
 export function ProjectCard({ exhibit, locale, featured = false }: { exhibit: Exhibit; locale: Locale; featured?: boolean }) {
-  const { project, screenshots, updatedAt, source } = exhibit;
+  const { project, screenshots } = exhibit;
   const m = getMessages(locale);
   const href = projectHref(project.slug, locale);
   const title = tr(project.title, locale);
@@ -55,11 +54,6 @@ export function ProjectCard({ exhibit, locale, featured = false }: { exhibit: Ex
         <span className="absolute start-3 top-3 rounded-full bg-ink/80 px-2.5 py-1 text-xs font-medium text-paper backdrop-blur">
           {m.card.demoData}
         </span>
-        {project.recommended && (
-          <span className="absolute end-3 top-3 rounded-full bg-chef-soft px-3 py-1 text-xs font-semibold text-chef shadow-sm">
-            ★ {m.card.recommended}
-          </span>
-        )}
       </div>
 
       <div className={`flex flex-1 flex-col gap-3 p-5 ${featured ? "lg:p-7" : ""}`}>
@@ -85,10 +79,7 @@ export function ProjectCard({ exhibit, locale, featured = false }: { exhibit: Ex
             </li>
           ))}
         </ul>
-        <div className="mt-auto flex flex-wrap items-center justify-between gap-3 pt-2">
-          <span className="text-xs text-muted">
-            {source.capture === "manual" || !updatedAt ? m.card.fromDemo : <RelativeTime iso={updatedAt} locale={locale} template={m.card.updated} />}
-          </span>
+        <div className="mt-auto flex flex-wrap items-center justify-end gap-3 pt-2">
           <div className="relative z-10 flex gap-2">
             <a
               href={href}

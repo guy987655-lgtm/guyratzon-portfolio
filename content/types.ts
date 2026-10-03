@@ -31,8 +31,6 @@ export type Project = {
   title: L10n;
   tagline: L10n;
   depth: "full" | "compact";
-  /** "Chef's recommendation" — the suggested starting point. */
-  recommended?: boolean;
   /** Public demo-mode entry. Absent for IBI (manual screenshots, no live link). */
   liveUrl?: string;
   stack: string[];

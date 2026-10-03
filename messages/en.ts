@@ -44,7 +44,6 @@ export const en: Messages = {
     freshness: "Every screen was captured automatically from the live sites, in demo mode. Last update: {date}.",
   },
   card: {
-    recommended: "Start here",
     quickLook: "Quick look",
     fullStory: "Full story",
     updated: "Updated {when}",
