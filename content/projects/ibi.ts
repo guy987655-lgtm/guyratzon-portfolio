@@ -120,6 +120,14 @@ export const ibi: Project = {
       },
     },
     {
+      route: "transactions",
+      caption: { he: "תנועות: כל קנייה ומכירה, עם סינון לפי סוג, שנה ושוק", en: "Transactions: every buy and sale, filtered by type, year and market" },
+    },
+    {
+      route: "closed",
+      caption: { he: "פוזיציות סגורות: מה הרווחתי בכל מכירה, ומה קרה למחיר מאז", en: "Closed positions: what each sale earned, and where the price went since" },
+    },
+    {
       route: "cashflow",
       caption: { he: "תזרים: ריבית ודיבידנדים חודש אחרי חודש", en: "Cash flow: interest and dividends, month by month" },
     },

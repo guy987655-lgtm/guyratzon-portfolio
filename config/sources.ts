@@ -46,6 +46,8 @@ export const sources: Source[] = [
       { id: "overview", path: "/?demo=1&tab=overview" },
       { id: "today", path: "/?demo=1&tab=today" },
       { id: "instrument", path: "/?demo=1&tab=instrument" },
+      { id: "transactions", path: "/?demo=1&tab=transactions" },
+      { id: "closed", path: "/?demo=1&tab=closed" },
       { id: "cashflow", path: "/?demo=1&tab=cashflow" },
     ],
   },
